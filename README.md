@@ -1,8 +1,7 @@
 ![](logojk1.png)
 
 - 👋 Hi, I’m @iJKENNEDY
-- 👀 I’m interested in mobile development, machine learning
-- 🌱 I’m currently learning dart, cloud computing, google cloud, 
+- 👀 I’m interested in data science, machine learning
 - 📫 How to reach me twitter, facebook
 <br/>
 <a href="https://www.linkedin.com/in/jherssonhz">
