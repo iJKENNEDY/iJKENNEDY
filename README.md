@@ -1,4 +1,4 @@
-![](bannergh.png)
+![](logojk1.png)
 
 - 👋 Hi, I’m @iJKENNEDY
 - 👀 I’m interested in mobile development, machine learning
