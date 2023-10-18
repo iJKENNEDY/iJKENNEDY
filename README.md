@@ -1,2 +1,2 @@
 ## WELCOME TO MY JUNGLE
-[](jungle001.jpeg)
+![](jungle001.jpeg)
