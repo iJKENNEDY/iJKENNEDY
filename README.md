@@ -1,29 +1,12 @@
+---
+
 # WELCOME TO MY JUNGLE
 
 ---
 
-<style>
-  body {
-    animation: oceanBackground 20s linear infinite;
-    background: linear-gradient(to bottom, #0099cc, #33ccff);
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  
-  @keyframes oceanBackground {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-</style>
-
 ## Detalles del Desarrollador
 
-![](jungle001.jpeg){ width=50% }
-
+![](jungle001.jpeg)
 - **Nombre:** iJKENNEDY
 - **Lenguaje de Programación:** Python
 - **Experiencia:** 1 año
