@@ -19,6 +19,5 @@
 
 ## Contacto
  
-- **LinkedIn:** [Perfil de LinkedIn](https://www.linkedin.com/in/ijkennedy)
-- **Twitter:** [@jkenz](https://twitter.com/jkenz)
+- **LinkedIn:** [Perfil de LinkedIn](https://www.linkedin.com/in/ijkennedy) 
 
