@@ -9,7 +9,7 @@
 ![](jungle001.jpeg)
 - **Nombre:** iJKENNEDY
 - **Lenguaje de Programación:** Python
-- **Experiencia:** 1 año
+
 - **Proyectos Destacados:**
   - Proyecto 1: Desarrollo de una aplicación web con Django.
   - Proyecto 2: Automatización de tareas con Python y Flask.
