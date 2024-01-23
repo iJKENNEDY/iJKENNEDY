@@ -6,7 +6,7 @@
 
 ## Detalles del Desarrollador
 
-![](jungle001.jpeg)
+![](logo.jpeg)
 - **Nombre:** iJKENNEDY
 - **Skill de Programación:** Python, psql
 
