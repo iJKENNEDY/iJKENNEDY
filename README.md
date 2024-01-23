@@ -6,7 +6,7 @@
 
 ## Detalles del Desarrollador
 
-![](logo.jpeg)
+![](ilogo.jpeg)
 - **Nombre:** iJKENNEDY
 - **Skill de Programación:** Python, psql
 
