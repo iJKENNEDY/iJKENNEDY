@@ -8,11 +8,9 @@
 
 ![](jungle001.jpeg)
 - **Nombre:** iJKENNEDY
-- **Lenguaje de Programación:** Python
+- **Skill de Programación:** Python, psql
 
-- **Proyectos Destacados:**
-  - Proyecto 1: Desarrollo de una aplicación web con Django.
-  - Proyecto 2: Automatización de tareas con Python y Flask.
+ 
 - **Perfil en GitHub:** [GitHub de Jkennedy](https://github.com/ijkennedy)
 
 ---
