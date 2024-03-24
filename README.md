@@ -6,7 +6,7 @@
 
 ## Detalles del Desarrollador
 
-![](ilogo.jpeg)
+![](banner-ai123.png)
 - **Nombre:** iJKENNEDY
 - **Skill de Programación:** Python, psql
 
