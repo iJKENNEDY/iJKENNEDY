@@ -1,6 +1,5 @@
 ---
-
-# WELCOME TO MY JUNGLE
+<span style="color: #f7f9fa; text-shadow: 0 0 5px #000000, 0 0 10px #ff0000;">WELCOME TO MY JUNGLE</span>
 
 ---
 
