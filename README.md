@@ -17,5 +17,5 @@
 
 ## Contacto
  
-- **LinkedIn:** [Perfil de LinkedIn](https://www.linkedin.com/in/ijkennedy) 
+- **LinkedIn:** [Perfil de LinkedIn](https://www.linkedin.com/in/jherssonhz/) 
 
