@@ -1,0 +1,306 @@
+       /* Define CSS variables for consistent theming */
+        :root {
+            --cyber-bg: #0a0f18; /* Main dark background */
+            --cyber-primary: #00f0ff; /* Main neon blue */
+            --cyber-secondary: #ff00ff; /* Neon pink/magenta */
+            --cyber-accent: #faff00; /* Neon yellow */
+            --cyber-green: #39ff14; /* Neon green */
+            --cyber-text: #e0e0e0; /* Main light text */
+            --cyber-border: #00f0ff80; /* Semi-transparent neon border */
+            --cyber-card-bg: #101828; /* Slightly lighter card background */
+            --font-primary: 'Orbitron', sans-serif; /* Font for titles */
+            --font-secondary: 'Share Tech Mono', monospace; /* Font for body text */
+        }
+
+        /* Base styles for the body */
+        body {
+            font-family: var(--font-secondary);
+            background-color: var(--cyber-bg);
+            color: var(--cyber-text);
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            line-height: 1.7; /* Improved readability */
+        }
+
+        /* Background class for the main container */
+        .cyberpunk-bg {
+            background-color: var(--cyber-bg);
+        }
+
+        /* --- Sidebar Styling --- */
+        .sidebar {
+            background-color: #0e1525; /* Slightly lighter than main background */
+            border-right: 2px solid var(--cyber-primary); /* Neon border on the right */
+            box-shadow: 5px 0 15px var(--cyber-primary); /* Neon glow shadow */
+            min-height: 100vh; /* Ensure it occupies full height */
+            position: sticky; /* Keep sidebar fixed on scroll */
+            top: 0; /* Align to the top */
+        }
+
+        /* Header information in the sidebar */
+        .header-info .logo-icon {
+            color: var(--cyber-green); /* Neon green icon */
+            text-shadow: 0 0 10px var(--cyber-green); /* Glow effect */
+        }
+
+        .header-info .site-title {
+            font-family: var(--font-primary); /* Primary font for title */
+            color: var(--cyber-green); /* Neon green title */
+            text-shadow: 0 0 5px var(--cyber-green), 0 0 10px var(--cyber-green); /* Double glow effect */
+            margin-bottom: 0.2rem;
+        }
+
+        .header-info .subtitle {
+            font-size: 0.8rem;
+            color: var(--cyber-text);
+            opacity: 0.8; /* Slightly transparent */
+        }
+
+        /* Navigation links in the sidebar */
+        .sidebar .nav-link {
+            font-family: var(--font-secondary);
+            color: var(--cyber-text);
+            padding: 0.75rem 1rem;
+            border-left: 3px solid transparent; /* Highlight border on hover/active */
+            transition: all 0.3s ease; /* Smooth transitions */
+            border-radius: 0.25rem; /* Slightly rounded corners for links */
+        }
+
+        .sidebar .nav-link i {
+            margin-right: 10px;
+            color: var(--cyber-secondary); /* Neon pink icon */
+            text-shadow: 0 0 5px var(--cyber-secondary); /* Glow effect */
+            width: 20px; /* For consistent icon alignment */
+        }
+
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            color: var(--cyber-primary); /* Neon blue text on hover/active */
+            background-color: rgba(0, 240, 255, 0.1); /* Light blue background */
+            border-left-color: var(--cyber-primary); /* Neon blue left border */
+            text-shadow: 0 0 5px var(--cyber-primary); /* Neon blue text shadow */
+        }
+
+        .sidebar .nav-link.active i {
+            color: var(--cyber-primary); /* Neon blue icon on active */
+            text-shadow: 0 0 5px var(--cyber-primary);
+        }
+
+        /* Sidebar headings for sections like Skills Tech */
+        .sidebar-heading {
+            font-family: var(--font-primary);
+            font-size: 0.75rem;
+            color: var(--cyber-accent) !important; /* Force neon yellow color */
+            text-shadow: 0 0 3px var(--cyber-accent);
+            border-bottom: 1px dashed var(--cyber-accent); /* Dashed neon line */
+            padding-bottom: 5px;
+        }
+
+        /* Skill icons styling */
+        .skill-icons .nav-item,
+        .social-icons .nav-item {
+            padding: 0.25rem 1rem;
+            color: var(--cyber-text);
+        }
+        .skill-icons .nav-item i{
+            margin-right: 8px;
+            color: var(--cyber-green); /* Neon green icons */
+        }
+
+        /* Social icons styling */
+        .social-icons {
+            display: flex;
+            justify-content: space-around; /* Distribute icons evenly */
+            padding: 0 1rem;
+        }
+
+        .social-icons .nav-item a {
+            font-size: 1.5rem;
+            color: var(--cyber-secondary); /* Neon pink icons */
+            transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
+        }
+
+        .social-icons .nav-item a:hover {
+            color: var(--cyber-primary); /* Neon blue on hover */
+            text-shadow: 0 0 10px var(--cyber-primary); /* Stronger glow on hover */
+        }
+
+        /* --- Main Content Area --- */
+        .content-area {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            /* Subtle scanlines effect for a retro tech feel */
+            background-image: linear-gradient(rgba(0,0,0,0.05) 50%, transparent 50%);
+            background-size: 100% 4px; /* Adjust thickness and spacing of lines */
+        }
+
+        /* Individual page sections */
+        .page-section {
+            display: none; /* Hidden by default, shown by JavaScript */
+            padding: 20px;
+            border: 1px solid var(--cyber-border); /* Neon border */
+            margin-bottom: 30px;
+            background-color: rgba(10, 15, 24, 0.5); /* Semi-transparent background */
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2), inset 0 0 10px rgba(0, 240, 255, 0.1); /* Outer and inner glow */
+            border-radius: 5px; /* Slightly rounded corners */
+        }
+
+        .page-section.active-section {
+            display: block; /* Display the active section */
+        }
+
+        /* Section titles */
+        .section-title {
+            font-family: var(--font-primary);
+            color: var(--cyber-primary);
+            text-shadow: 0 0 8px var(--cyber-primary); /* Strong neon glow */
+            border-bottom: 2px solid var(--cyber-primary); /* Neon underline */
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px; /* Spaced out letters */
+        }
+
+        /* --- Project Cards Styling --- */
+        .project-card {
+            background-color: var(--cyber-card-bg);
+            border: 1px solid var(--cyber-secondary); /* Neon pink border */
+            border-radius: 5px;
+            box-shadow: 0 0 10px var(--cyber-secondary), inset 0 0 5px rgba(255,0,255,0.2); /* Pink glow */
+            color: var(--cyber-text);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+            height: 100%; /* Ensure uniform height in a row */
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px) scale(1.02); /* Lift and slightly enlarge on hover */
+            box-shadow: 0 0 20px var(--cyber-secondary), 0 0 30px var(--cyber-primary); /* Enhanced glow */
+        }
+
+        .project-card .card-img-top-placeholder {
+            height: 180px;
+            background-color: #0a0f18; /* Matches general background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cyber-accent); /* Neon yellow icon */
+            border-bottom: 1px solid var(--cyber-secondary);
+        }
+        .project-card .card-img-top-placeholder i {
+            text-shadow: 0 0 10px var(--cyber-accent); /* Neon yellow glow */
+        }
+
+        .project-card .card-title {
+            font-family: var(--font-primary);
+            color: var(--cyber-green); /* Neon green title */
+            text-shadow: 0 0 5px var(--cyber-green);
+        }
+
+        .project-card .card-text {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Tech icons used in projects */
+        .used-tech .tech-icon {
+            font-size: 1.5rem;
+            margin-right: 8px;
+            color: var(--cyber-primary); /* Neon blue icons */
+            opacity: 0.8;
+        }
+        .used-tech .tech-icon:hover {
+            opacity: 1;
+            text-shadow: 0 0 5px var(--cyber-primary); /* Glow on hover */
+        }
+
+        /* Cyberpunk styled buttons */
+        .btn-cyber {
+            background-color: transparent;
+            color: var(--cyber-primary);
+            border: 2px solid var(--cyber-primary);
+            padding: 8px 15px;
+            text-transform: uppercase;
+            font-family: var(--font-secondary);
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px var(--cyber-primary); /* Initial glow */
+            border-radius: 0.25rem; /* Slightly rounded corners */
+        }
+
+        .btn-cyber:hover, .btn-cyber:focus {
+            background-color: var(--cyber-primary);
+            color: var(--cyber-bg); /* Dark text on neon background */
+            box-shadow: 0 0 15px var(--cyber-primary), 0 0 25px var(--cyber-primary); /* Stronger glow on hover */
+        }
+
+        /* --- Blog List Styling --- */
+        .blog-list .list-group-item {
+            background-color: var(--cyber-card-bg);
+            border: 1px solid var(--cyber-border);
+            color: var(--cyber-text);
+            margin-bottom: 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .blog-list .list-group-item:hover {
+            background-color: rgba(0, 240, 255, 0.1); /* Light blue background on hover */
+            border-color: var(--cyber-primary); /* Neon blue border on hover */
+        }
+
+        .blog-list .list-group-item h5 {
+            color: var(--cyber-green); /* Neon green title */
+            font-family: var(--font-primary);
+        }
+
+        .blog-list .list-group-item small.text-muted {
+            color: var(--cyber-accent) !important; /* Force neon yellow color for dates/tags */
+            opacity: 0.7;
+        }
+
+        /* --- Form Styling --- */
+        .form-control {
+            background-color: rgba(10, 20, 40, 0.8); /* Darker, semi-transparent input fields */
+            border: 1px solid var(--cyber-border);
+            color: var(--cyber-text);
+            border-radius: 0; /* Sharp edges */
+        }
+
+        .form-control:focus {
+            background-color: rgba(15, 25, 50, 0.9);
+            color: var(--cyber-text);
+            border-color: var(--cyber-primary); /* Neon blue border on focus */
+            box-shadow: 0 0 10px var(--cyber-primary); /* Neon blue glow on focus */
+        }
+
+        .form-label {
+            color: var(--cyber-primary); /* Neon blue labels */
+            font-family: var(--font-secondary);
+        }
+
+        /* --- Footer Styling --- */
+        .footer-cyber {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--cyber-text);
+            opacity: 0.6;
+            border-top: 1px dashed var(--cyber-border) !important; /* Dashed neon line */
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 767.98px) {
+            .sidebar {
+                border-right: none;
+                box-shadow: none;
+                /* Bootstrap's collapse handles the height for mobile */
+            }
+            .content-area {
+                margin-left: 0 !important; /* Remove left margin on small screens */
+            }
+            /* Mobile menu toggle button */
+            .d-md-none.btn {
+                background-color: var(--cyber-primary);
+                color: var(--cyber-bg);
+                border: none;
+                box-shadow: 0 0 10px var(--cyber-primary);
+            }
+        }
