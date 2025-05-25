@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sobre mí - Project Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="winter-header text-center py-4 mb-4">
+    <img src="img/jkperfil.png" alt="Foto de perfil JKHENZAI" class="rounded-circle shadow mb-3" style="width:100px;height:100px;object-fit:cover;border:3px solid #b6c6e6;background:#fff;">
+    <h1 class="display-4 fw-bold text-primary-emphasis">
+      <span class="snowflake">&#10052;</span>
+      Sobre mí - JKHENZAI
+      <span class="snowflake">&#10052;</span>
+    </h1>
+        <div class="d-flex justify-content-center gap-4 social-list mb-3">
+      <a href="https://github.com/iJKENNEDY" class="text-decoration-none fs-3" title="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/jherssonhz/" class="text-decoration-none fs-3" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+      <a href="https://instagram.com/jkhenzai" class="text-decoration-none fs-3" title="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+    </div>
+    <nav class="mt-3">
+      <ul class="nav justify-content-center nav-pills">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html"><i class="bi bi-person"></i> Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html"><i class="bi bi-kanban"></i> Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="blogs.html"><i class="bi bi-journal-text"></i> Blogs</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html"><i class="bi bi-gear"></i> Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope-at"></i> Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container py-4">
+    <section>
+      <h2 class="fw-bold text-info-emphasis mb-3"><i class="bi bi-person-badge"></i> Perfil Profesional</h2>
+      <p>
+        Soy un desarrollador especializado en inteligencia artificial, machine learning y agentes AI. Tengo experiencia en el desarrollo de soluciones tecnológicas utilizando Python, PSQL y otras herramientas modernas. Mi objetivo es crear herramientas innovadoras que ayuden a las personas y empresas a resolver problemas complejos.
+      </p>
+      <ul>
+        <li>Desarrollo de agentes inteligentes</li>
+        <li>Integración de APIs y automatización</li>
+        <li>Optimización de procesos con IA</li>
+        <li>Mejora y conversión de imágenes mediante AI</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="mt-5">
+    <p class="mb-0">&copy; <span id="year"></span> Mi Portafolio. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

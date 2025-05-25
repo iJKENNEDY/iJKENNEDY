@@ -1,0 +1,128 @@
+body {
+  min-height: 100vh;
+  color: #232946;
+  background: linear-gradient(rgba(255,255,255,0.90), rgba(200,230,255,0.90)), url('../img/fondo.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Header y título */
+.winter-header {
+  background: rgba(255,255,255,0.96);
+  color: #232946;
+  padding: 2.5rem 0 1.5rem 0;
+  border-bottom: 3px solid #00cfff;
+  box-shadow: 0 4px 24px #00cfff22;
+  border-radius: 0 0 24px 24px;
+}
+.winter-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #00cfff;
+  text-shadow: 0 2px 8px #00cfff22;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+.snowflake {
+  color: #00cfff;
+  font-size: 2.2rem;
+  margin: 0 0.3rem;
+  vertical-align: middle;
+}
+
+/* Subtítulo */
+.subtitle {
+  color: #232946;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  background: rgba(255,255,255,0.92);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px #00cfff22;
+  display: inline-block;
+  border: 1.5px solid #00cfff;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* Secciones y subtítulos */
+section {
+  background: rgba(255,255,255,0.93);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #00cfff11;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+section h2 {
+  color: #00cfff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 4px #00cfff11;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* Redes sociales con iconos */
+.social-list {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+.social-list a {
+  color: #00cfff;
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+.social-list a:hover {
+  color: #232946;
+  text-shadow: 0 2px 8px #00cfff;
+}
+
+/* Tarjetas de proyectos */
+.project-card {
+  background: rgba(255,255,255,0.97);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px #00cfff22;
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 1.5rem;
+  border: 1.5px solid #00cfff22;
+  transition: transform 0.15s, box-shadow 0.15s;
+  position: relative;
+  z-index: 1;
+  color: #232946;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+.project-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px #00cfff55;
+  border-color: #00cfff;
+}
+.project-card strong,
+.project-card .card-title {
+  color: #00cfff;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.project-card span {
+  color: #232946;
+  font-size: 0.98rem;
+}
+
+/* Footer */
+footer {
+  background: rgba(255,255,255,0.92);
+  color: #00cfff;
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+  margin-top: 2rem;
+  border-top: 1.5px solid #00cfff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
