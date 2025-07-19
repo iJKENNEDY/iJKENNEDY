@@ -1,3 +1,33 @@
+@layer base {
+    :root {
+        --color-primary: #DC0000;
+        --color-secondary: #D2D2D2;
+        --color-background: #E0F7FA;
+        --color-section-bg: #C6EBF0;
+        --color-text: #6A5ACD;
+        --color-neon-accent: #00F6FF;
+    }
+    body.dark {
+        --color-primary: #FF8700;
+        --color-secondary: #00F6FF;
+        --color-background: #002D3C;
+        --color-section-bg: #013C4D;
+        --color-text: #EFEFEE;
+        --color-neon-accent: #DC0000;
+    }
+    .font-titles { font-family: 'Orbitron', sans-serif; }
+    .font-body { font-family: 'Rajdhani', sans-serif; }
+    .font-console { font-family: 'Courier New', Courier, monospace; }
+    @keyframes load-bar {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(0); }
+    }
+    .animate-load-bar {
+        animation: load-bar 1.5s forwards ease-out;
+    }
+}
+
+
 
         /* Define CSS variables for consistent theming */
         :root {

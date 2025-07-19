@@ -13,43 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts - Orbitron and Rajdhani -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
-    <style type="text/tailwindcss">
-        @layer base {
-            /* Custom CSS variables for standard mode (Light - Ocean Theme) */
-            :root {
-                --color-primary: #DC0000; /* Ferrari Red */
-                --color-secondary: #D2D2D2; /* Mercedes Silver */
-                --color-background: #E0F7FA; /* Light Ocean Blue */
-                --color-section-bg: #C6EBF0; /* Slightly darker light ocean blue for sections */
-                --color-text: #6A5ACD; /* Strong Pastel Blue-Violet */
-                --color-neon-accent: #00F6FF; /* Neon for details */
-            }
-
-            /* Custom CSS variables for race mode (dark mode - Deep Ocean Theme) */
-            body.dark {
-                --color-primary: #FF8700; /* McLaren Papaya Neon */
-                --color-secondary: #00F6FF; /* Cyan Neon */
-                --color-background: #002D3C; /* Dark Marine Blue */
-                --color-section-bg: #013C4D; /* Slightly lighter dark ocean blue for sections */
-                --color-text: #EFEFEE;
-                --color-neon-accent: #DC0000; /* Red Neon */
-            }
-
-            /* Apply custom fonts */
-            .font-titles { font-family: 'Orbitron', sans-serif; }
-            .font-body { font-family: 'Rajdhani', sans-serif; }
-            .font-console { font-family: 'Courier New', Courier, monospace; }
-
-            /* Keyframes for skill bar animation (kept for potential future use or other animations) */
-            @keyframes load-bar {
-                from { transform: translateX(-100%); }
-                to { transform: translateX(0); }
-            }
-            .animate-load-bar {
-                animation: load-bar 1.5s forwards ease-out;
-            }
-        }
-    </style>
+   
+    <link rel="stylesheet" href="style.css">
     <script>
         // Tailwind CSS configuration for custom colors and fonts
         tailwind.config = {
@@ -434,74 +399,7 @@
         <p>&copy; 2025 JKHZ - Todos los derechos reservados. Diseñado para la máxima velocidad.</p>
     </footer>
 
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', () => {
-            const body = document.body;
-            const raceModeToggle = document.getElementById('raceModeToggle');
-            const toggleIcon = raceModeToggle.querySelector('i');
-            const contactForm = document.getElementById('contactForm');
-            const formMessage = document.getElementById('formMessage');
-
-            // Initialize race mode based on system preference or saved setting
-            const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('theme');
-
-            if (savedTheme === 'dark' || (!savedTheme && prefersDarkMode)) {
-                body.classList.add('dark');
-                toggleIcon.classList.remove('fa-moon');
-                toggleIcon.classList.add('fa-sun');
-            }
-
-            // Toggle race mode on button click
-            raceModeToggle.addEventListener('click', () => {
-                body.classList.toggle('dark');
-                if (body.classList.contains('dark')) {
-                    toggleIcon.classList.remove('fa-moon');
-                    toggleIcon.classList.add('fa-sun');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    toggleIcon.classList.remove('fa-sun');
-                    toggleIcon.classList.add('fa-moon');
-                    localStorage.setItem('theme', 'light');
-                }
-            });
-
-            // Handle form submission
-            contactForm.addEventListener('submit', (event) => {
-                event.preventDefault(); // Prevent default form submission
-
-                // In a real application, you would send this data to a server.
-                // For this example, we'll just log it and show a success message.
-                const formData = new FormData(contactForm);
-                const data = {};
-                for (let [key, value] of formData.entries()) {
-                    data[key] = value;
-                }
-                console.log('Form data submitted:', data);
-
-                // Show success message
-                formMessage.classList.remove('hidden');
-                formMessage.classList.remove('bg-red-200', 'text-red-800'); /* Remove error styling if present */
-                formMessage.classList.add('bg-green-200', 'text-green-800');
-                formMessage.textContent = 'MENSAJE_RECIBIDO: Tu transmisión ha sido enviada al paddock. Permanece a la espera de una respuesta.';
-
-                // Clear form fields after a short delay
-                setTimeout(() => {
-                    contactForm.reset();
-                    formMessage.classList.add('hidden');
-                }, 3000); // Hide message and clear form after 3 seconds
-            });
-
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('nav a').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        });
-    </script>
+    <script type="text/javascript" src="main.js"></script>
+    
 </body>
 </html>
