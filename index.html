@@ -1,10 +1,10 @@
-<!-- WEBSITE FORMA F1 -->
+<!-- WEBSITE F1 STYLE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio JKHZ</title>
+    <title>JKHZ Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!--icon page-->
@@ -13,393 +13,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts - Orbitron and Rajdhani -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
-   
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
+    <!-- Tailwind Custom Config -->
     <script>
-        // Tailwind CSS configuration for custom colors and fonts
         tailwind.config = {
-            darkMode: 'class', /* Enable dark mode based on 'dark' class on body */
-            theme: {
-                extend: {
-                    colors: {
-                        primary: 'var(--color-primary)',
-                        secondary: 'var(--color-secondary)',
-                        background: 'var(--color-background)',
-                        text: 'var(--color-text)',
-                        neon: 'var(--color-neon-accent)',
-                        'section-bg': 'var(--color-section-bg)', /* New color for section backgrounds */
-                    },
-                    fontFamily: {
-                        titles: ['Orbitron', 'sans-serif'],
-                        body: ['Rajdhani', 'sans-serif'],
-                        console: ['"Courier New"', 'Courier', 'monospace'],
-                    },
-                    boxShadow: {
-                        'neon-primary': '0 0 15px var(--color-primary)',
-                        'neon-accent': '0 0 15px var(--color-neon-accent)',
-                    }
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    primary: 'var(--color-primary)',      // Dorado principal / Petronas Teal
+                    secondary: 'var(--color-secondary)',  // Gris piedra técnica / Gris niebla técnica
+                    background: 'var(--color-background)',// Champán claro / Azul profundo marino
+                    text: 'var(--color-text)',            // Negro elegante / Blanco hielo
+                    accent: 'var(--color-accent)',        // Teal Mercedes claro / Verde aguamarina claro
+                    border: 'var(--color-border)',        // Gris piedra técnica / Gris niebla técnica
+                    'section-bg': 'var(--color-section-bg)', // Blanco puro / Azul petróleo
+                    title: 'var(--color-title)',          // Dorado principal / Verde aguamarina claro
+                },
+                fontFamily: {
+                    titles: ['Orbitron', 'sans-serif'],
+                    body: ['Rajdhani', 'sans-serif'],
+                    console: ['"Courier New"', 'Courier', 'monospace'],
+                },
+                boxShadow: {
+                    'neon-primary': '0 0 15px var(--color-primary)',
+                    'neon-accent': '0 0 15px var(--color-accent)',
                 }
             }
         }
+    }
     </script>
 </head>
 <body class="bg-background text-text transition-colors duration-300 min-h-screen flex flex-col items-center p-4 sm:p-8">
 
     <!-- Navigation Bar -->
-    <nav class="w-full max-w-5xl bg-gray-900 bg-opacity-90 backdrop-blur-sm p-4 rounded-b-lg shadow-lg mb-8 sticky top-0 z-50 border-b-2 border-primary">
+    <nav class="w-full max-w-5xl bg-section-bg bg-opacity-95 backdrop-blur-sm p-4 rounded-b-lg shadow-lg mb-8 sticky top-0 z-50 border-b-2 border-primary">
         <ul class="flex flex-wrap justify-center gap-4 sm:gap-8 font-titles text-secondary text-lg sm:text-xl">
-            <li><a href="#about" class="hover:text-primary transition-colors duration-200">NOSOTROS</a></li>
-            <li><a href="#skills" class="hover:text-primary transition-colors duration-200">HABILIDADES</a></li>
-            <li><a href="#services" class="hover:text-primary transition-colors duration-200">SERVICIOS</a></li>
-            <li><a href="#projects" class="hover:text-primary transition-colors duration-200">PROYECTOS</a></li>
+            <li><a href="#about" class="hover:text-primary transition-colors duration-200">ABOUT</a></li>
+            <li><a href="#skills" class="hover:text-primary transition-colors duration-200">SKILLS</a></li>
+            <li><a href="#services" class="hover:text-primary transition-colors duration-200">SERVICES</a></li>
+            <li><a href="#projects" class="hover:text-primary transition-colors duration-200">PROJECTS</a></li>
             <li><a href="#blog" class="hover:text-primary transition-colors duration-200">BLOG</a></li>
-            <li><a href="#contact" class="hover:text-primary transition-colors duration-200">CONTACTARME</a></li>
+            <li><a href="#contact" class="hover:text-primary transition-colors duration-200">CONTACT ME</a></li>
         </ul>
     </nav>
 
-    <!-- Header / Title -->
-    <header class="text-center mb-12" id="home">
-        <h1 class="text-6xl sm:text-7xl font-titles text-primary drop-shadow-lg leading-tight">JKHZ // PORTAFOLIO_V2.0</h1>
-        <p class="text-2xl sm:text-3xl font-body text-secondary mt-4">INGENIERO // PILOTO_DE_DATOS</p>
-        
-        <!-- Random Profile Image -->
-        <div class="mt-8 flex justify-center">
-            <img src="logo-dev.png" alt="Imagen de perfil aleatoria" class="rounded-full border-4 border-neon shadow-neon-accent object-cover w-40 h-40">
-        </div>
+    <!-- Portfolio Sections -->
+    <div id="about-container"></div>
+    <div id="skills-container"></div>
+    <div id="services-container"></div>
+    <div id="projects-container"></div>
+    <div id="blog-container"></div>
+    <div id="contact-container"></div>
 
-        <!-- CV Download Button -->
-        <a href="https://example.com/your-cv.pdf" target="_blank" download="JKHZ_CV.pdf"
-           class="mt-8 inline-block bg-primary text-white font-titles text-xl py-3 px-8 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-neon-primary border-2 border-primary">
-            <i class="fas fa-download mr-3"></i> DESCARGAR_CV
-        </a>
-    </header>
-
-    <!-- About Me Section (Nosotros) -->
-    <section id="about" class="w-full max-w-4xl mb-16 p-6 bg-section-bg rounded-lg shadow-xl shadow-neon-primary border-2 border-primary text-text">
-        <h2 class="text-4xl font-titles text-center text-neon mb-8 border-b-2 border-secondary pb-4">SOBRE_EL_PILOTO (NOSOTROS)</h2>
-        <div class="font-body text-lg leading-relaxed space-y-4">
-            <p>Saludos desde la cabina de datos. Soy un ingeniero de software apasionado por transformar datos complejos en soluciones innovadoras. Con una trayectoria enfocada en el desarrollo de sistemas robustos y eficientes, mi objetivo es siempre optimizar el rendimiento y la escalabilidad, como en una carrera de Fórmula 1.</p>
-            <p>Mi enfoque se centra en la construcción de arquitecturas limpias y mantenibles, utilizando las mejores prácticas para asegurar que cada "componente" del software funcione en perfecta armonía. La precisión y la eficiencia son mis copilotos en cada proyecto.</p>
-            <p>Estoy constantemente explorando nuevas tecnologías y metodologías para mantenerme a la vanguardia, asegurando que mis habilidades estén siempre "afinadas" para cualquier desafío en el circuito tecnológico.</p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="w-full max-w-4xl mb-16 p-6 bg-section-bg rounded-lg shadow-xl shadow-neon-primary border-2 border-primary text-text">
-        <h2 class="text-4xl font-titles text-center text-neon mb-8 border-b-2 border-secondary pb-4">HABILIDADES_TELEMETRÍA</h2>
-        <div class="space-y-10">
-            <!-- Category: DESARROLLO_BACKEND -->
-            <div>
-                <h3 class="text-3xl font-titles text-primary mb-6 flex items-center">
-                    <i class="fas fa-server mr-3 text-2xl"></i> DESARROLLO_BACKEND
-                </h3>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fab fa-python text-neon mr-3 text-2xl"></i> Python
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fab fa-node-js text-neon mr-3 text-2xl"></i> Node.js
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-network-wired text-neon mr-3 text-2xl"></i> APIs RESTful
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-cogs text-neon mr-3 text-2xl"></i> Microservicios
-                    </div>
-                </div>
-            </div>
-
-            <!-- Category: BASES_DE_DATOS -->
-            <div>
-                <h3 class="text-3xl font-titles text-primary mb-6 flex items-center">
-                    <i class="fas fa-database mr-3 text-2xl"></i> BASES_DE_DATOS
-                </h3>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-square-root-alt text-neon mr-3 text-2xl"></i> PostgreSQL
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-leaf text-neon mr-3 text-2xl"></i> MongoDB
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-table text-neon mr-3 text-2xl"></i> SQL Server
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-warehouse text-neon mr-3 text-2xl"></i> Data Warehousing
-                    </div>
-                </div>
-            </div>
-
-            <!-- Category: CLOUD_Y_DEVOPS -->
-            <div>
-                <h3 class="text-3xl font-titles text-primary mb-6 flex items-center">
-                    <i class="fas fa-cloud mr-3 text-2xl"></i> CLOUD_Y_DEVOPS
-                </h3>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fab fa-aws text-neon mr-3 text-2xl"></i> AWS
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fab fa-google text-neon mr-3 text-2xl"></i> GCP
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fab fa-docker text-neon mr-3 text-2xl"></i> Docker
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-tools text-neon mr-3 text-2xl"></i> CI/CD
-                    </div>
-                </div>
-            </div>
-
-            <!-- Category: INTELIGENCIA_ARTIFICIAL -->
-            <div>
-                <h3 class="text-3xl font-titles text-primary mb-6 flex items-center">
-                    <i class="fas fa-brain mr-3 text-2xl"></i> INTELIGENCIA_ARTIFICIAL
-                </h3>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-robot text-neon mr-3 text-2xl"></i> Machine Learning
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-cubes text-neon mr-3 text-2xl"></i> Deep Learning
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-comments text-neon mr-3 text-2xl"></i> Procesamiento Lenguaje Natural (NLP)
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-chart-pie text-neon mr-3 text-2xl"></i> Visión por Computadora
-                    </div>
-                </div>
-            </div>
-
-            <!-- Category: ANÁLISIS_DE_DATOS -->
-            <div>
-                <h3 class="text-3xl font-titles text-primary mb-6 flex items-center">
-                    <i class="fas fa-chart-bar mr-3 text-2xl"></i> ANÁLISIS_DE_DATOS
-                </h3>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-chart-line text-neon mr-3 text-2xl"></i> Visualización de Datos
-                    </div>
-                    <div class="bg-gray-900 px-6 py-3 rounded-full border border-secondary text-lg font-body font-semibold flex items-center shadow-md hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                        <i class="fas fa-compass text-neon mr-3 text-2xl"></i> Modelado de Datos
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="w-full max-w-4xl mb-16 p-6 bg-section-bg rounded-lg shadow-xl shadow-neon-primary border-2 border-primary text-text">
-        <h2 class="text-4xl font-titles text-center text-neon mb-8 border-b-2 border-secondary pb-4">SERVICIOS_PIT_STOP</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-body text-lg">
-            <!-- Service Card 1 -->
-            <div class="bg-gray-900 p-6 rounded-lg border border-secondary flex flex-col items-center text-center hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <i class="fas fa-database text-5xl text-primary mb-4"></i>
-                <h3 class="text-2xl font-titles text-neon mb-2">Diseño y Optimización de Bases de Datos</h3>
-                <p>Construcción de esquemas eficientes y optimización de consultas para un rendimiento máximo.</p>
-            </div>
-            <!-- Service Card 2 -->
-            <div class="bg-gray-900 p-6 rounded-lg border border-secondary flex flex-col items-center text-center hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <i class="fas fa-code text-5xl text-primary mb-4"></i>
-                <h3 class="text-2xl font-titles text-neon mb-2">Desarrollo Backend Robusto</h3>
-                <p>Creación de APIs RESTful y sistemas backend escalables con Python y frameworks modernos.</p>
-            </div>
-            <!-- Service Card 3 -->
-            <div class="bg-gray-900 p-6 rounded-lg border border-secondary flex flex-col items-center text-center hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <i class="fas fa-cloud text-5xl text-primary mb-4"></i>
-                <h3 class="text-2xl font-titles text-neon mb-2">Implementación Cloud & DevOps</h3>
-                <p>Despliegue y gestión de aplicaciones en la nube, automatización de CI/CD y monitoreo.</p>
-            </div>
-            <!-- Service Card 4 -->
-            <div class="bg-gray-900 p-6 rounded-lg border border-secondary flex flex-col items-center text-center hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <i class="fas fa-chart-line text-5xl text-primary mb-4"></i>
-                <h3 class="text-2xl font-titles text-neon mb-2">Análisis de Datos y BI</h3>
-                <p>Transformación de datos crudos en insights accionables para la toma de decisiones estratégicas.</p>
-            </div>
-            <!-- Service Card 5 -->
-            <div class="bg-gray-900 p-6 rounded-lg border border-secondary flex flex-col items-center text-center hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <i class="fas fa-brain text-5xl text-primary mb-4"></i>
-                <h3 class="text-2xl font-titles text-neon mb-2">Modelado Machine Learning</h3>
-                <p>Desarrollo e implementación de modelos de aprendizaje automático para predicción y clasificación.</p>
-            </div>
-            <!-- Service Card 6 -->
-            <div class="bg-gray-900 p-6 rounded-lg border border-secondary flex flex-col items-center text-center hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <i class="fas fa-shield-alt text-5xl text-primary mb-4"></i>
-                <h3 class="text-2xl font-titles text-neon mb-2">Consultoría Técnica</h3>
-                <p>Asesoramiento experto en arquitectura de software, escalabilidad y optimización de sistemas.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="w-full max-w-5xl mb-16 p-6 bg-section-bg rounded-lg shadow-xl shadow-neon-primary border-2 border-primary text-text">
-        <h2 class="text-4xl font-titles text-center text-neon mb-8 border-b-2 border-secondary pb-4">REGISTRO_DE_CARRERAS (PROYECTOS)</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Project Card 1 (Proyecto X: El Circuito de Mónaco) -->
-            <article class="bg-gray-900 p-6 rounded-lg border-2 border-secondary shadow-md text-text hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <div class="flex justify-between items-center mb-4 pb-2 border-b border-primary">
-                    <h3 class="text-3xl font-titles text-secondary">Proyecto X: El Circuito de Mónaco</h3>
-                    <i class="fas fa-flag-checkered text-primary text-3xl"></i>
-                </div>
-                <div class="flex flex-col gap-6">
-                    <div>
-                        <h4 class="text-2xl font-titles text-neon mb-4">El Circuito (Arquitectura)</h4>
-                        <img src="https://placehold.co/600x400/111/DC0000?text=DIAGRAMA+PROYECTO+X" alt="Diagrama de arquitectura del Proyecto X" class="w-full h-auto rounded-lg border border-secondary shadow-md">
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-titles text-neon mb-4">El Podio (Logros)</h4>
-                        <ul class="list-none space-y-3 font-body text-lg">
-                            <li class="flex items-center text-green-400">
-                                <i class="fas fa-trophy mr-3 text-xl"></i> P1: Reducción del 30% en tiempo de carga.
-                            </li>
-                            <li class="flex items-center text-blue-400">
-                                <i class="fas fa-trophy mr-3 text-xl"></i> P2: Top 3 en eficiencia de consultas SQL.
-                            </li>
-                            <li class="flex items-center text-yellow-400">
-                                <i class="fas fa-medal mr-3 text-xl"></i> Vuelta Rápida: Implementación de API REST en tiempo récord.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project Card 2 (Proyecto Y: El Gran Premio de Nurburgring) -->
-            <article class="bg-gray-900 p-6 rounded-lg border-2 border-secondary shadow-md text-text hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <div class="flex justify-between items-center mb-4 pb-2 border-b border-primary">
-                    <h3 class="text-3xl font-titles text-secondary">Proyecto Y: El Gran Premio de Nürburgring</h3>
-                    <i class="fas fa-car-side text-primary text-3xl"></i>
-                </div>
-                <div class="flex flex-col gap-6">
-                    <div>
-                        <h4 class="text-2xl font-titles text-neon mb-4">El Circuito (Arquitectura)</h4>
-                        <img src="https://placehold.co/600x400/111/00F6FF?text=DIAGRAMA+PROYECTO+Y" alt="Diagrama de arquitectura del Proyecto Y" class="w-full h-auto rounded-lg border border-secondary shadow-md">
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-titles text-neon mb-4">El Podio (Logros)</h4>
-                        <ul class="list-none space-y-3 font-body text-lg">
-                            <li class="flex items-center text-green-400">
-                                <i class="fas fa-trophy mr-3 text-xl"></i> Optimización de procesos batch: 20% más rápido.
-                            </li>
-                            <li class="flex items-center text-blue-400">
-                                <i class="fas fa-trophy mr-3 text-xl"></i> Integración exitosa con 4 sistemas externos.
-                            </li>
-                            <li class="flex items-center text-yellow-400">
-                                <i class="fas fa-medal mr-3 text-xl"></i> Desarrollo de interfaz de usuario para monitoreo.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project Card 3 (Proyecto Z: El Desafío de Suzuka) -->
-            <article class="bg-gray-900 p-6 rounded-lg border-2 border-secondary shadow-md text-text hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <div class="flex justify-between items-center mb-4 pb-2 border-b border-primary">
-                    <h3 class="text-3xl font-titles text-secondary">Proyecto Z: El Desafío de Suzuka</h3>
-                    <i class="fas fa-globe text-primary text-3xl"></i>
-                </div>
-                <div class="flex flex-col gap-6">
-                    <div>
-                        <h4 class="text-2xl font-titles text-neon mb-4">El Circuito (Arquitectura)</h4>
-                        <img src="https://placehold.co/600x400/111/FF8700?text=DIAGRAMA+PROYECTO+Z" alt="Diagrama de arquitectura del Proyecto Z" class="w-full h-auto rounded-lg border border-secondary shadow-md">
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-titles text-neon mb-4">El Podio (Logros)</h4>
-                        <ul class="list-none space-y-3 font-body text-lg">
-                            <li class="flex items-center text-green-400">
-                                <i class="fas fa-trophy mr-3 text-xl"></i> Implementación de microservicios con Docker.
-                            </li>
-                            <li class="flex items-center text-blue-400">
-                                <i class="fas fa-trophy mr-3 text-xl"></i> Migración de datos de 100 GB sin interrupciones.
-                            </li>
-                            <li class="flex items-center text-yellow-400">
-                                <i class="fas fa-medal mr-3 text-xl"></i> Reducción de costos de infraestructura en un 15%.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="w-full max-w-4xl mb-16 p-6 bg-section-bg rounded-lg shadow-xl shadow-neon-primary border-2 border-primary text-text">
-        <h2 class="text-4xl font-titles text-center text-neon mb-8 border-b-2 border-secondary pb-4">DIARIO_DE_PISTA (BLOG)</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-body text-lg">
-            <!-- Blog Post 1 -->
-            <article class="bg-gray-900 p-6 rounded-lg border border-secondary hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <h3 class="text-2xl font-titles text-secondary mb-2">Desarrollo Ágil en Boxes: Estrategias Rápidas</h3>
-                <p class="text-sm text-gray-400 mb-4">Fecha: 15 de Mayo, 2025</p>
-                <p class="mb-4">Exploramos cómo las metodologías ágiles pueden replicar la eficiencia de un pit stop en tus proyectos de software, acelerando entregas y mejorando la calidad...</p>
-                <a href="#" class="text-primary hover:underline font-semibold">Leer más <i class="fas fa-arrow-right ml-1"></i></a>
-            </article>
-            <!-- Blog Post 2 -->
-            <article class="bg-gray-900 p-6 rounded-lg border border-secondary hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <h3 class="text-2xl font-titles text-secondary mb-2">La Telemetría de Datos: Clave para el Rendimiento</h3>
-                <p class="text-sm text-gray-400 mb-4">Fecha: 01 de Mayo, 2025</p>
-                <p class="mb-4">Un análisis profundo sobre cómo la recopilación y análisis de datos en tiempo real pueden ser tu ventaja competitiva en el mundo del desarrollo...</p>
-                <a href="#" class="text-primary hover:underline font-semibold">Leer más <i class="fas fa-arrow-right ml-1"></i></a>
-            </article>
-            <!-- Blog Post 3 -->
-            <article class="bg-gray-900 p-6 rounded-lg border border-secondary hover:shadow-lg hover:shadow-primary transition-shadow duration-300">
-                <h3 class="text-2xl font-titles text-secondary mb-2">Optimización de Queries: El Arte de la Vuelta Rápida</h3>
-                <p class="text-sm text-gray-400 mb-4">Fecha: 20 de Abril, 2025</p>
-                <p class="mb-4">Consejos y trucos para escribir consultas de base de datos que rompen récords de velocidad y eficiencia...</p>
-                <a href="#" class="text-primary hover:underline font-semibold">Leer más <i class="fas fa-arrow-right ml-1"></i></a>
-            </article>
-        </div>
-    </section>
-
-    <!-- Contact Form Section (Contactarme) -->
-    <section id="contact" class="w-full max-w-2xl mb-16 p-6 bg-section-bg rounded-lg shadow-xl shadow-neon-primary border-2 border-primary text-text">
-        <h2 class="text-4xl font-titles text-center text-neon mb-8 border-b-2 border-secondary pb-4">COMUNICACIONES_PADDOCK (CONTACTARME)</h2>
-        <form id="contactForm" class="bg-gray-900 p-8 rounded-lg border-2 border-secondary shadow-md text-text">
-            <div class="mb-6">
-                <label for="name" class="font-titles text-secondary block mb-2 text-lg">PILOT_NAME:</label>
-                <input type="text" id="name" name="name" required
-                       class="w-full bg-gray-800 border border-secondary text-white p-3 rounded-md font-console focus:outline-none focus:ring-2 focus:ring-primary">
-            </div>
-            <div class="mb-6">
-                <label for="email" class="font-titles text-secondary block mb-2 text-lg">RADIO_CHANNEL (Email):</label>
-                <input type="email" id="email" name="email" required
-                       class="w-full bg-gray-800 border border-secondary text-white p-3 rounded-md font-console focus:outline-none focus:ring-2 focus:ring-primary">
-            </div>
-            <div class="mb-6">
-                <label for="message" class="font-titles text-secondary block mb-2 text-lg">MESSAGE_TO_PADDOCK:</label>
-                <textarea id="message" name="message" rows="5" required
-                          class="w-full bg-gray-800 border border-secondary text-white p-3 rounded-md font-console focus:outline-none focus:ring-2 focus:ring-primary resize-y"></textarea>
-            </div>
-            <button type="submit" class="engine-start-btn w-full bg-primary text-white font-titles text-xl py-3 rounded-md transition-all duration-300 hover:shadow-neon-primary hover:scale-105">
-                ENGINE START (Enviar)
-            </button>
-            <div id="formMessage" class="mt-4 p-3 rounded-md text-center hidden" role="alert"></div>
-        </form>
-    </section>
-
-    <!-- Race Mode Toggle Button -->
-    <button id="raceModeToggle" title="Toggle Race Mode"
-            class="fixed bottom-6 right-6 bg-primary text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-neon-primary focus:outline-none focus:ring-4 focus:ring-primary focus:ring-opacity-75"
-            aria-label="Alternar Modo Carrera (Oscuro/Claro)">
-        <i class="fas fa-moon text-2xl"></i>
+    <!-- Modern Theme Toggle Button -->
+    <button id="raceModeToggle" title="Toggle Theme"
+        class="fixed bottom-6 right-6 bg-primary text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center w-16 h-16 border-4 border-accent hover:bg-accent hover:text-primary hover:scale-110 focus:outline-none focus:ring-4 focus:ring-accent focus:ring-opacity-75"
+        aria-label="Toggle Theme">
+        <span class="flex items-center justify-center w-full h-full relative">
+            <i class="fas fa-sun text-2xl transition-transform duration-300 rotate-0 dark:-rotate-90"></i>
+            <i class="fas fa-moon text-2xl transition-transform duration-300 absolute opacity-0 dark:opacity-100 dark:rotate-0"></i>
+        </span>
     </button>
 
     <!-- Footer -->
-    <footer class="w-full max-w-5xl text-center py-8 border-t-2 border-secondary mt-12 text-secondary font-body text-lg">
+    <footer class="w-full max-w-5xl text-center py-8 border-t-2 border-secondary mt-12 text-secondary font-body text-lg bg-section-bg">
         <div class="flex justify-center gap-6 mb-4">
-            <a href="https://linkedin.com/in/jkhz" target="_blank" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="LinkedIn">
+            <a href="https://linkedin.com/in/jherssonhz/" target="_blank" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="LinkedIn">
                 <i class="fab fa-linkedin text-3xl"></i>
             </a>
-            <a href="https://github.com/jkhz" target="_blank" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="GitHub">
+            <a href="https://github.com/iJKENNEDY" target="_blank" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="GitHub">
                 <i class="fab fa-github text-3xl"></i>
             </a>
-            <a href="#" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="Twitter">
+            <a href="https://x.com/jkennz" target="_blank" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="Twitter">
                 <i class="fab fa-twitter text-3xl"></i>
             </a>
         </div>
-        <p>&copy; 2025 JKHZ - Todos los derechos reservados. Diseñado para la máxima velocidad.</p>
+        <p>&copy; 2025 JKHZ - All rights reserved. Designed for maximum speed.</p>
     </footer>
 
+    <!-- Main Script -->
     <script type="text/javascript" src="main.js"></script>
-    
-</body>
+</body> 
 </html>

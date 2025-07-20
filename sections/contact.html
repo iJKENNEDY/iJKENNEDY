@@ -1,0 +1,46 @@
+<section id="contact" class="w-full max-w-3xl mx-auto bg-section-bg rounded-2xl shadow-xl p-10 mb-12 border border-border">
+    <h2 class="font-titles text-3xl text-title mb-8 text-center">Contact Me</h2>
+    <form id="contactForm" action="https://formspree.io/f/mjkogkkp" method="POST" class="flex flex-col gap-6">
+        <input type="text" name="name" placeholder="Your Name" required
+            class="p-4 rounded-xl border border-border font-body bg-background text-text text-lg focus:border-primary focus:ring-2 focus:ring-primary transition w-full" />
+        <input type="email" name="email" placeholder="Your Email" required
+            class="p-4 rounded-xl border border-border font-body bg-background text-text text-lg focus:border-primary focus:ring-2 focus:ring-primary transition w-full" />
+        <textarea name="message" placeholder="Your Message" required
+            class="p-4 rounded-xl border border-border font-body bg-background text-text text-lg focus:border-primary focus:ring-2 focus:ring-primary transition w-full min-h-[120px] resize-none"></textarea>
+        <button type="submit"
+            class="bg-primary text-white font-titles text-lg p-4 rounded-xl hover:bg-accent hover:text-title transition shadow-neon-primary w-full flex items-center justify-center gap-2">
+            <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        <div id="formMessage" class="hidden mt-4 p-4 rounded-xl font-body text-lg text-center bg-background border border-accent text-accent"></div>
+    </form>
+</section>
+<script>
+// filepath: c:\Users\qwerty\Developer\iJKENNEDY\sections\contact.html
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const formData = new FormData(form);
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+        if (response.ok) {
+            document.getElementById('formMessage').textContent = 'Enviado';
+            document.getElementById('formMessage').classList.remove('hidden');
+            setTimeout(() => {
+                window.location.href = 'https://jkhz.jkhenzai.tech/';
+            }, 1500);
+            form.reset();
+        } else {
+            document.getElementById('formMessage').textContent = 'Error sending, try again.';
+            document.getElementById('formMessage').classList.remove('hidden');
+        }
+    })
+    .catch(() => {
+        document.getElementById('formMessage').textContent = 'Error sending, try again.';
+        document.getElementById('formMessage').classList.remove('hidden');
+    });
+});
+</script>
