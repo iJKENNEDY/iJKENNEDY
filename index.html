@@ -48,16 +48,30 @@
 <body class="bg-background text-text transition-colors duration-300 min-h-screen flex flex-col items-center p-4 sm:p-8">
 
     <!-- Navigation Bar -->
-    <nav class="w-full max-w-5xl bg-section-bg bg-opacity-95 backdrop-blur-sm p-4 rounded-b-lg shadow-lg mb-8 sticky top-0 z-50 border-b-2 border-primary">
-        <ul class="flex flex-wrap justify-center gap-4 sm:gap-8 font-titles text-secondary text-lg sm:text-xl">
+    <nav class="w-full max-w-5xl bg-section-bg bg-opacity-95 backdrop-blur-sm p-4 rounded-b-lg shadow-lg mb-4 sticky top-0 z-50 border-b-2 border-primary">
+        <ul class="flex flex-wrap justify-center gap-4 sm:gap-8 font-titles text-secondary text-lg sm:text-xl items-center">
             <li><a href="#about" class="hover:text-primary transition-colors duration-200">ABOUT</a></li>
             <li><a href="#skills" class="hover:text-primary transition-colors duration-200">SKILLS</a></li>
             <li><a href="#services" class="hover:text-primary transition-colors duration-200">SERVICES</a></li>
             <li><a href="#projects" class="hover:text-primary transition-colors duration-200">PROJECTS</a></li>
             <li><a href="#blog" class="hover:text-primary transition-colors duration-200">BLOG</a></li>
             <li><a href="#contact" class="hover:text-primary transition-colors duration-200">CONTACT ME</a></li>
+            <li class="px-3 py-1 rounded-full text-xs font-semibold tracking-wider bg-accent text-background dark:bg-primary dark:text-background animate-pulse select-none">BETA</li>
         </ul>
     </nav>
+
+    <!-- Beta Banner -->
+    <div id="betaNotice" class="w-full max-w-5xl mb-6 rounded-xl border border-border bg-background/90 backdrop-blur shadow-lg p-4 flex flex-col sm:flex-row gap-3 items-start sm:items-center transition duration-300">
+        <div class="flex items-center gap-3">
+            <span class="px-2 py-1 rounded-md text-[10px] font-bold tracking-widest bg-accent text-background dark:bg-primary dark:text-background">BETA</span>
+            <p class="font-body text-sm sm:text-base leading-snug">
+                Este portafolio está en modo beta. Algunas funciones pueden cambiar o estar incompletas. Gracias por visitar.
+            </p>
+        </div>
+        <button id="closeBetaBanner" class="ml-auto text-accent hover:text-primary dark:text-accent dark:hover:text-title transition text-sm font-titles flex items-center gap-1">
+            <i class="fas fa-times text-xs"></i> Cerrar
+        </button>
+    </div>
 
     <!-- Portfolio Sections -->
     <div id="about-container"></div>
@@ -95,5 +109,23 @@
 
     <!-- Main Script -->
     <script type="text/javascript" src="main.js"></script>
+
+    <!-- Beta Banner Script -->
+    <script>
+        (function() {
+            const banner = document.getElementById('betaNotice');
+            const closeBtn = document.getElementById('closeBetaBanner');
+            if (localStorage.getItem('betaNoticeDismissed')) {
+                banner.classList.add('hidden');
+            }
+            closeBtn.addEventListener('click', () => {
+                banner.classList.add('opacity-0', '-translate-y-2');
+                setTimeout(() => {
+                    banner.classList.add('hidden');
+                    localStorage.setItem('betaNoticeDismissed', '1');
+                }, 250);
+            });
+        })();
+    </script>
 </body> 
 </html>
