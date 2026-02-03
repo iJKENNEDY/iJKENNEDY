@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI & Python Consulting — Business Solutions</title>
+    <meta name="description" content="Modern AI & Python development and consulting for business: automation, APIs, web backends, and machine learning solutions." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #0b1020;
+        --bg-2: #0f1730;
+        --text: #e6f1ff;
+        --muted: #a9b7c6;
+        --accent: #42b6ff;
+        --accent-2: #28d8a1;
+        --card: #10192f;
+        --border: #22314d;
+        --shadow: 0 10px 30px rgba(0,0,0,0.35);
+        --radius: 14px;
+        --radius-sm: 10px;
+        --maxw: 1200px;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background:
+          radial-gradient(1200px 600px at 10% -10%, rgba(40,216,161,0.18), transparent 60%),
+          radial-gradient(1000px 500px at 90% 10%, rgba(66,182,255,0.14), transparent 55%),
+          linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+        background-attachment: fixed;
+        line-height: 1.6;
+      }
+      .mono, h1, h2, .brand span, .chip { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { color: var(--accent-2); }
+      .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+      /* Header */
+      header {
+        position: sticky; top: 0; z-index: 10;
+        -webkit-backdrop-filter: saturate(120%) blur(10px);
+        backdrop-filter: saturate(120%) blur(10px);
+        background: linear-gradient(180deg, rgba(10,16,32,0.7), rgba(10,16,32,0.35));
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 8px 28px rgba(0,0,0,.35);
+      }
+      /* Geometric outline frame */
+      header { position: sticky; }
+      header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius);
+        padding: 1px;
+        background: linear-gradient(135deg, rgba(66,182,255,.65), rgba(40,216,161,.65));
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+      header::after {
+        content: "";
+        position: absolute;
+        left: 18px; right: 18px; bottom: -1px;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(66,182,255,.5), rgba(40,216,161,.5));
+        pointer-events: none;
+      }
+      .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; position: relative; z-index: 1; }
+      .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.4px; }
+      .logo { width: 28px; height: 28px; border-radius: 8px; background: conic-gradient(from 150deg, var(--accent), var(--accent-2), var(--accent)); box-shadow: 0 0 0 2px #0b1020, 0 0 22px rgba(66,182,255,0.35); }
+      .nav a { color: var(--text); opacity:.9; }
+      .links { display:flex; align-items:center; gap: 18px; }
+      .menu-btn { display:none; border:1px solid var(--border); background:transparent; color:var(--text); padding:10px 12px; border-radius:10px; }
+
+      /* Hero */
+      .hero { padding: 64px 0 40px; }
+      .hero-grid { display:grid; grid-template-columns: 1fr; gap: 28px; }
+      .hero h1 { font-size: clamp(28px, 4.5vw, 52px); line-height: 1.12; margin: 0 0 12px; }
+      .hero p { font-size: clamp(15px, 2.8vw, 18px); color: var(--muted); margin: 0 0 20px; }
+      .cta { display:flex; gap: 12px; flex-wrap: wrap; }
+      .btn { display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius: 999px; border: 1px solid var(--border); color: var(--text); background: #0e162c; box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease; }
+      .btn.primary { background: linear-gradient(90deg, rgba(66,182,255,.18), rgba(40,216,161,.18)); border-color: #2c3e64; }
+      .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 26px rgba(0,0,0,.38); border-color:#3a4f7c; }
+      .hero-vis { border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; background: #0e162c; box-shadow: var(--shadow); }
+      .chip-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+      .chip { font-size:12px; padding:6px 10px; border-radius: 999px; border:1px solid #2a3a5a; color:#b9c7da; background:#0d1428; }
+
+      /* Sections */
+      section { padding: 52px 0; }
+      .section-title { font-size: clamp(22px, 3.5vw, 34px); margin:0 0 14px; }
+      .section-sub { color: var(--muted); margin:0 0 24px; }
+      .grid { display:grid; gap: 18px; }
+
+      /* Services */
+      .service-card { border:1px solid var(--border); border-radius: var(--radius); background: var(--card); padding:18px; box-shadow: var(--shadow); }
+      .service-head { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+      .icon { width: 28px; height:28px; display:grid; place-items:center; border-radius:8px; background:linear-gradient(180deg, #16325f, #11264a); border:1px solid #2b416e; box-shadow: inset 0 0 18px rgba(66,182,255,.15); }
+      .service-title { font-weight:600; }
+      .service-desc { color:var(--muted); font-size:14px; }
+
+      /* About */
+      .about { display:grid; gap:16px; }
+      .about-card { border:1px solid var(--border); border-radius: var(--radius); background: var(--card); padding:18px; }
+      .bullets { display:grid; gap:8px; color:var(--muted); }
+
+      /* Business */
+      .business-card { border:1px solid var(--border); border-radius: var(--radius); background: var(--card); padding:20px; }
+      .biz-list { display:grid; gap:8px; color:var(--muted); }
+
+      /* Portfolio */
+      .projects { grid-template-columns: 1fr; }
+      .project { position:relative; overflow:hidden; border:1px solid var(--border); border-radius: var(--radius); background: linear-gradient(180deg, #121d35, #0f1830); box-shadow: var(--shadow); }
+      .preview { height:160px; background:
+          radial-gradient(240px 120px at 20% 20%, rgba(66,182,255,.25), transparent 60%),
+          radial-gradient(220px 110px at 80% 30%, rgba(40,216,161,.22), transparent 60%),
+          linear-gradient(180deg, #0e162c, #0b1226);
+      }
+      .project .content { padding:16px; }
+      .project h4 { margin:0 0 6px; }
+      .project p { margin:0 0 12px; color:var(--muted); font-size:14px; }
+      .links { display:flex; gap:10px; }
+      .link-btn { padding:8px 12px; border-radius:999px; border:1px solid #2a3a5a; color:#cfe3ff; background:#0d1428; }
+      .link-btn:hover { border-color:#3a4f7c; }
+
+      /* CTA final */
+      .cta-final { text-align:center; }
+      .cta-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+      /* Footer */
+      footer { border-top:1px solid var(--border); color:var(--muted); padding:28px 0; }
+      .footer-bar { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+      .footer-links { display:flex; gap:12px; }
+      .svg-hero { width:100%; height:auto; display:block; }
+
+      /* Responsive */
+      @media (min-width: 720px) {
+        .hero-grid { grid-template-columns: 1.25fr .9fr; }
+        .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .projects { grid-template-columns: repeat(4, 1fr); }
+      }
+
+      /* Reveal animation */
+      [data-reveal] { opacity: 0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease; }
+      [data-reveal].show { opacity: 1; transform: translateY(0); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <span class="logo" aria-hidden="true"></span>
+          <span>jkhenzAI<span>
+        </div>
+        <nav class="links" aria-label="Main">
+            <a href="../index.html">Home</a>
+            <span aria-hidden="true" style="display:inline-block;margin:0 8px;padding:4px 8px;border-radius:999px;background:linear-gradient(90deg, rgba(66,182,255,0.12), rgba(40,216,161,0.08));color:var(--accent);font-weight:700;font-size:13px;">•</span>
+            <a href="#services">Services</a>
+            <span aria-hidden="true" style="display:inline-block;margin:0 8px;padding:4px 8px;border-radius:999px;background:linear-gradient(90deg, rgba(66,182,255,0.12), rgba(40,216,161,0.08));color:var(--accent);font-weight:700;font-size:13px;">•</span>
+            <a href="#about">About</a>
+            <span aria-hidden="true" style="display:inline-block;margin:0 8px;padding:4px 8px;border-radius:999px;background:linear-gradient(90deg, rgba(66,182,255,0.12), rgba(40,216,161,0.08));color:var(--accent);font-weight:700;font-size:13px;">•</span>
+            <a href="#portfolio">Portfolio</a>
+            <span aria-hidden="true" style="display:inline-block;margin:0 8px;padding:4px 8px;border-radius:999px;background:linear-gradient(90deg, rgba(66,182,255,0.12), rgba(40,216,161,0.08));color:var(--accent);font-weight:700;font-size:13px;">•</span>
+            <a href="#business">Business</a>
+            <span aria-hidden="true" style="display:inline-block;margin:0 8px;padding:4px 8px;border-radius:999px;background:linear-gradient(90deg, rgba(66,182,255,0.12), rgba(40,216,161,0.08));color:var(--accent);font-weight:700;font-size:13px;">•</span>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-btn" id="menuToggle" aria-label="Open Menu">Menu</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="hero">
+        <div class="container hero-grid">
+          <div data-reveal>
+            <h1>AI & Python Solutions for Your Business</h1>
+            <p>
+              I specialize in AI, Machine Learning, and Python development — tailored automation, APIs, and backend integrations that deliver measurable outcomes.
+            </p>
+            <div class="cta">
+              <a class="btn primary" href="#services">View Services</a>
+              <a class="btn" href="#contact">Contact</a>
+            </div>
+            <div class="chip-row" aria-label="Capabilities">
+              <span class="chip">Python</span>
+              <span class="chip">AI</span>
+              <span class="chip">Machine Learning</span>
+              <span class="chip">Automation</span>
+              <span class="chip">APIs</span>
+              <span class="chip">Web Backends</span>
+            </div>
+          </div>
+          <div class="hero-vis" data-reveal>
+            <svg viewBox="0 0 520 280" role="img" aria-label="AI coding visualization" class="svg-hero">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                  <stop offset="0" stop-color="#42b6ff" />
+                  <stop offset="1" stop-color="#28d8a1" />
+                </linearGradient>
+              </defs>
+              <rect x="0" y="0" width="520" height="280" rx="12" fill="#0b1226" stroke="#22314d" />
+              <g stroke="url(#g1)" stroke-width="2" fill="none" opacity="0.9">
+                <path d="M40 60 Q 120 20, 200 60 T 360 60 T 480 60" />
+                <path d="M40 110 Q 120 70, 200 110 T 360 110 T 480 110" />
+                <path d="M40 160 Q 120 120, 200 160 T 360 160 T 480 160" />
+              </g>
+              <g fill="#101a32" stroke="#2b416e">
+                <rect x="40" y="190" width="440" height="56" rx="8" />
+              </g>
+              <text x="54" y="223" fill="#cfe3ff" font-family="monospace" font-size="14">from ai import Agent  # smart automation</text>
+              <circle cx="460" cy="40" r="5" fill="#42b6ff" />
+              <circle cx="440" cy="220" r="5" fill="#28d8a1" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title" data-reveal>Services</h2>
+          <p class="section-sub" data-reveal>
+            Production-focused development — Python, AI/ML, and web backends.
+          </p>
+          <div class="grid cols-3">
+            <article class="service-card" data-reveal>
+              <div class="service-head">
+                <div class="icon" aria-hidden="true">🐍</div>
+                <div class="service-title">Python Development</div>
+              </div>
+              <p class="service-desc">Automation pipelines, REST APIs, scalability patterns, and robust data tooling — built with maintainable Python.</p>
+            </article>
+            <article class="service-card" data-reveal>
+              <div class="service-head">
+                <div class="icon" aria-hidden="true">🤖</div>
+                <div class="service-title">AI & ML Solutions</div>
+              </div>
+              <p class="service-desc">Model development, integration, and consulting — from classical ML to modern LLM patterns and evaluation.</p>
+            </article>
+            <article class="service-card" data-reveal>
+              <div class="service-head">
+                <div class="icon" aria-hidden="true">🛠️</div>
+                <div class="service-title">Web Backends</div>
+              </div>
+              <p class="service-desc">Secure backends, integrations, and services — clean architecture, observability, and pragmatic performance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <div class="container">
+          <h2 class="section-title" data-reveal>About Me</h2>
+          <div class="about" data-reveal>
+            <article class="about-card">
+              <p>I’m a Systems Engineering student focused on AI and Python development. I bring a research mindset, practical delivery, and a passion for solving high-impact problems.</p>
+              <div class="bullets">
+                <span>• Systems Engineering in progress</span>
+                <span>• Specialization in AI</span>
+                <span>• Experience in Python and backend development</span>
+                <span>• Passion for research and technology</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Business -->
+      <section id="business">
+        <div class="container">
+          <h2 class="section-title" data-reveal>For Your Business</h2>
+          <div class="business-card" data-reveal>
+            <p>Turn ideas into measurable outcomes: reduce manual effort, improve accuracy, and accelerate delivery through automation and AI-driven tooling.</p>
+            <div class="biz-list">
+              <span>• Automation of repetitive workflows</span>
+              <span>• Data extraction/scraping with validation</span>
+              <span>• API-first integrations and services</span>
+              <span>• ML/LLM solutions with evaluation best practices</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio">
+        <div class="container">
+          <h2 class="section-title" data-reveal>Featured Projects</h2>
+          <p class="section-sub" data-reveal>Selected work and demos. Links to GitHub and live previews when available.</p>
+          <div class="grid projects">
+            <article class="project" data-reveal>
+              <div class="preview"></div>
+              <div class="content">
+                <h4>Automation Pipeline — Python</h4>
+                <p>Modular job runner with retries, metrics, and alerting; integrates with REST and message queues.</p>
+                <div class="links">
+                  <a class="link-btn" href="https://github.com/iJKENNEDY" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <article class="project" data-reveal>
+              <div class="preview"></div>
+              <div class="content">
+                <h4>ML Inference Service</h4>
+                <p>Fast API for model inference with caching, experiment tracking, and structured evaluation reports.</p>
+                <div class="links">
+                  <a class="link-btn" href="https://github.com/iJKENNEDY" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <article class="project" data-reveal>
+              <div class="preview"></div>
+              <div class="content">
+                <h4>Data Scraper Toolkit</h4>
+                <p>Resilient scraping with smart throttling, HTML parsing, and export to databases and CSVs.</p>
+                <div class="links">
+                  <a class="link-btn" href="https://github.com/iJKENNEDY" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <article class="project" data-reveal>
+              <div class="preview"></div>
+              <div class="content">
+                <h4>Backend Integrations</h4>
+                <p>Clean architecture for third‑party integrations, pagination, retries, observability, and testing.</p>
+                <div class="links">
+                  <a class="link-btn" href="https://github.com/iJKENNEDY" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Final -->
+      <section id="contact" class="cta-final">
+        <div class="container">
+          <h2 class="section-title" data-reveal>Have a project in mind?</h2>
+          <p class="section-sub" data-reveal>Let’s discuss how Python, AI, and automation can help you ship faster.</p>
+          <div class="cta-actions" data-reveal>
+            <a class="btn primary" href="https://www.linkedin.com/in/jherssonhz/" target="_blank" rel="noopener" aria-label="LinkedIn jkhenzAI">jkhenzAI</a>
+            <a class="btn" href="mailto:contact@yourdomain.dev">Email</a>
+            <a class="btn" href="https://github.com/iJKENNEDY" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-bar">
+        <span>&copy; <span id="year"></span> iJKENNEDY — AI & Python Consulting</span>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/jherssonhz/" target="_blank" aria-label="LinkedIn jkhenzAI" rel="noopener">jkhenzAI</a>
+          <a href="https://github.com/iJKENNEDY" target="_blank" aria-label="GitHub" rel="noopener">GitHub</a>
+          <a href="https://x.com/jkennz" target="_blank" aria-label="X" rel="noopener">X</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scroll for internal anchors
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (e) => {
+          const id = a.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+      });
+
+      // Mobile menu (progressive enhancement)
+      const menuBtn = document.getElementById('menuToggle');
+      const navLinks = document.querySelector('header .links');
+      const mq = window.matchMedia('(max-width: 719px)');
+      function applyMenuLayout() {
+        if (mq.matches) {
+          menuBtn.style.display = 'inline-block';
+          navLinks.style.display = 'none';
+          menuBtn.onclick = () => {
+            const open = navLinks.style.display === 'flex';
+            navLinks.style.display = open ? 'none' : 'flex';
+          };
+        } else {
+          menuBtn.style.display = 'none';
+          navLinks.style.display = 'flex';
+        }
+      }
+      applyMenuLayout();
+      mq.addEventListener('change', applyMenuLayout);
+
+      // Scroll reveal
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('show'); });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+      document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
