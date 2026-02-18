@@ -26,3 +26,45 @@ body.dark {
     border-bottom: 2px solid var(--color-primary);
     transition: color 0.2s, border-bottom 0.2s;
 }
+
+/* Navbar hover: highlight stronger with underline + glow */
+nav a {
+    position: relative;
+    transition: color 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: var(--color-primary);
+    box-shadow: 0 0 8px var(--color-accent);
+    transition: width 0.18s ease-in-out;
+}
+nav a:hover {
+    color: var(--color-title);
+    text-shadow: 0 0 6px var(--color-accent);
+}
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Viewer-only: enlarge paragraph text in standalone sections */
+.viewer #section-host p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+/* Main page: enlarge paragraphs inside section containers */
+body:not(.viewer) #about-container p,
+body:not(.viewer) #skills-container p,
+body:not(.viewer) #services-container p,
+body:not(.viewer) #projects-container p,
+body:not(.viewer) #vibecoding-container p,
+body:not(.viewer) #blog-container p,
+body:not(.viewer) #contact-container p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+}

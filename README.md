@@ -28,6 +28,9 @@ sections/
   projects.html
   services.html
   skills.html
+  vibecoding.html
+viewer.html
+viewer.js
 ```
 
 - `index.html`: punto de entrada del sitio.
@@ -83,6 +86,19 @@ Notas:
 - Añadir una nueva sección: crea un archivo en [sections/](sections) (por ejemplo, `experience.html`) y enlázalo desde la navegación en [index.html](index.html) o cárgalo dinámicamente desde [main.js](main.js).
 - Actualizar estilos: centraliza modificaciones en [style.css](style.css) para mantener consistencia.
 - Optimizar recursos: comprime imágenes en [assets/](assets) y usa formatos modernos cuando sea posible.
+
+### VibeCoding
+Sección dedicada a proyectos rápidos y exploratorios. Primer proyecto:
+- HackerNews Report: https://github.com/iJKENNEDY/hackernews-report
+
+### Viewer de secciones
+Puedes abrir `Projects`, `Blog` y `VibeCoding` en una ventana/pestaña separada:
+- Navegación: icono de ventana junto a cada sección en [index.html](index.html).
+- Directo: [viewer.html?section=projects](viewer.html?section=projects), [viewer.html?section=blog](viewer.html?section=blog), [viewer.html?section=vibecoding](viewer.html?section=vibecoding)
+
+Funciones del viewer:
+- Breadcrumb: muestra `Home / <Sección>` bajo el título.
+- Toggle de tema: botón en el header, sincronizado con `localStorage` (`theme=dark|light`).
 
 ## Autor
 - iJKENNEDY

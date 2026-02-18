@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section Viewer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts - Orbitron and Rajdhani -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Favicon avatar -->
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/22012490?s=48&v=4">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: 'var(--color-primary)',
+            secondary: 'var(--color-secondary)',
+            background: 'var(--color-background)',
+            text: 'var(--color-text)',
+            accent: 'var(--color-accent)',
+            border: 'var(--color-border)',
+            'section-bg': 'var(--color-section-bg)',
+            title: 'var(--color-title)'
+          },
+          fontFamily: {
+            titles: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            console: ['"Courier New"', 'Courier', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="viewer bg-background text-text min-h-screen p-6">
+  <header class="max-w-5xl mx-auto mb-6 bg-section-bg/80 backdrop-blur rounded-xl border border-border shadow-lg px-4 sm:px-6 py-4 flex items-center justify-between">
+    <div class="flex flex-col">
+      <h1 id="viewerTitle" class="font-titles text-2xl sm:text-3xl text-title tracking-wide">Section</h1>
+      <nav aria-label="Breadcrumb" class="mt-1">
+        <span id="viewerCrumb" class="font-body text-sm text-secondary">Home / Section</span>
+      </nav>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="viewerThemeToggle" title="Toggle Theme"
+        class="bg-primary text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center w-10 h-10 border-2 border-accent hover:bg-accent hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-75">
+        <span class="flex items-center justify-center w-full h-full">
+          <i class="fas fa-moon text-base" aria-hidden="true"></i>
+        </span>
+      </button>
+      <a href="index.html" class="text-secondary hover:text-primary font-titles flex items-center gap-2" title="Volver">
+        <i class="fas fa-home"></i>
+        Home
+      </a>
+    </div>
+  </header>
+  <main class="max-w-5xl mx-auto">
+    <div id="section-host"></div>
+  </main>
+  <script src="viewer.js"></script>
+</body>
+</html>

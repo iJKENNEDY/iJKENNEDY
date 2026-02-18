@@ -50,13 +50,23 @@
     <!-- Navigation Bar -->
     <nav class="w-full max-w-5xl bg-section-bg bg-opacity-95 backdrop-blur-sm p-4 rounded-b-lg shadow-lg mb-4 sticky top-0 z-50 border-b-2 border-primary">
         <ul class="flex flex-wrap justify-center gap-4 sm:gap-8 font-titles text-secondary text-lg sm:text-xl items-center">
-            <li><a href="#about" class="hover:text-primary transition-colors duration-200">ABOUT</a></li>
-            <li><a href="#skills" class="hover:text-primary transition-colors duration-200">SKILLS</a></li>
-            <li><a href="#services" class="hover:text-primary transition-colors duration-200">SERVICES</a></li>
-            <li><a href="#projects" class="hover:text-primary transition-colors duration-200">PROJECTS</a></li>
-            <li><a href="#blog" class="hover:text-primary transition-colors duration-200">BLOG</a></li>
-            <li><a href="#contact" class="hover:text-primary transition-colors duration-200">CONTACT ME</a></li>
-            <li><a href="sections/business.html" class="hover:text-primary transition-colors duration-200">BUSINESS</a></li>
+            <li><a href="#about" class="hover:text-primary transition-colors duration-200">👤 ABOUT</a></li>
+            <li><a href="#skills" class="hover:text-primary transition-colors duration-200">🧠 SKILLS</a></li>
+            <li><a href="#services" class="hover:text-primary transition-colors duration-200">🛠️ SERVICES</a></li>
+            <li class="flex items-center gap-2">
+                <a href="#projects" class="hover:text-primary transition-colors duration-200">🚀 PROJECTS</a>
+                <a href="viewer.html?section=projects" target="_blank" rel="noopener" class="text-secondary hover:text-primary" title="Abrir Projects en ventana"><i class="fas fa-window-restore"></i></a>
+            </li>
+            <li class="flex items-center gap-2">
+                <a href="#vibecoding" class="hover:text-primary transition-colors duration-200">🎧 VIBECODING</a>
+                <a href="viewer.html?section=vibecoding" target="_blank" rel="noopener" class="text-secondary hover:text-primary" title="Abrir VibeCoding en ventana"><i class="fas fa-window-restore"></i></a>
+            </li>
+            <li class="flex items-center gap-2">
+                <a href="#blog" class="hover:text-primary transition-colors duration-200">📝 BLOG</a>
+                <a href="viewer.html?section=blog" target="_blank" rel="noopener" class="text-secondary hover:text-primary" title="Abrir Blog en ventana"><i class="fas fa-window-restore"></i></a>
+            </li>
+            <li><a href="#contact" class="hover:text-primary transition-colors duration-200">✉️ CONTACT ME</a></li>
+            <li><a href="sections/business.html" class="hover:text-primary transition-colors duration-200">💼 BUSINESS</a></li>
             <li class="px-3 py-1 rounded-full text-xs font-semibold tracking-wider bg-accent text-background dark:bg-primary dark:text-background animate-pulse select-none">BETA</li>
         </ul>
     </nav>
@@ -79,6 +89,7 @@
     <div id="skills-container"></div>
     <div id="services-container"></div>
     <div id="projects-container"></div>
+    <div id="vibecoding-container"></div>
     <div id="blog-container"></div>
     <div id="contact-container"></div>
 
