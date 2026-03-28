@@ -1,4 +1,8 @@
 (function() {
+  const EXTERNAL_SECTIONS = {
+    projects: 'http://projects.jkhenzai.dev/'
+  };
+
   const map = {
     projects: 'sections/projects.html',
     blog: 'sections/blog.html',
@@ -46,6 +50,11 @@
         try { localStorage.setItem('theme', 'light'); } catch {}
       }
     });
+  }
+
+  if (section && EXTERNAL_SECTIONS[section]) {
+    window.location.href = EXTERNAL_SECTIONS[section];
+    return;
   }
 
   if (!section || !(section in map)) {

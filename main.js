@@ -1,5 +1,7 @@
 
 
+const PROJECTS_URL = 'http://projects.jkhenzai.dev/';
+
 const sections = [
     { id: 'about', file: 'sections/about.html' },
     { id: 'skills', file: 'sections/skills.html' },
@@ -62,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formMessage.classList.add('hidden');
         }, 3000);
     });
-    document.querySelectorAll('nav a').forEach(anchor => {
+    document.querySelectorAll('nav a[href^="#"]:not([href="#projects"])').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -70,14 +72,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+    const projectsNavLink = document.querySelector('nav a[href="#projects"]');
+    if (projectsNavLink) {
+        projectsNavLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = PROJECTS_URL;
+        });
+    }
     
 });
     // ...existing code...
     
-    document.querySelectorAll('nav ul li a').forEach(link => {
+    document.querySelectorAll('nav ul li a[href^="#"]:not([href="#projects"])').forEach(link => {
         link.addEventListener('click', function(e) {
             // Elimina la clase activa de todos los enlaces
-            document.querySelectorAll('nav ul li a').forEach(l => l.classList.remove('text-primary', 'border-b-2', 'border-primary'));
+            document.querySelectorAll('nav ul li a[href^="#"]:not([href="#projects"])').forEach(l => l.classList.remove('text-primary', 'border-b-2', 'border-primary'));
             // Agrega la clase activa al enlace clickeado
             this.classList.add('text-primary', 'border-b-2', 'border-primary');
         });
