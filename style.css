@@ -29,6 +29,7 @@ body.dark {
 
 /* Navbar hover: highlight stronger with underline + glow */
 nav a {
+    display: inline-block;
     position: relative;
     transition: color 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
 }
