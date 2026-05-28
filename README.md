@@ -1,107 +1,62 @@
-# Portafolio – iJKENNEDY
+# iJKENNEDY
 
-Sitio web estático de portafolio personal. Incluye una página principal y secciones independientes para “About”, “Projects”, “Services”, “Skills”, “Blog” y “Contact”. El repositorio está preparado para publicarse con GitHub Pages y usa un dominio personalizado (archivo `CNAME`).
+**AI Engineering · Backend Development · Open Source Projects**
 
-## Contenido
-- Descripción rápida del proyecto
-- Estructura del repositorio
-- Cómo ejecutarlo en local
-- Flujo de desarrollo (dónde editar cada cosa)
-- Despliegue (GitHub Pages)
-- Mantenimiento y tareas comunes
+Personal portfolio of **Jhersson Huaman**. This space highlights what best represents my work: building APIs, automating data workflows, and creating experiences with AI agents.
 
-## Descripción
-Este proyecto es un portafolio 100% estático construido con HTML, CSS y JavaScript mínimos. La navegación y el contenido principal se organizan en secciones HTML reutilizables bajo `sections/` y se cargan en la página principal.
+## ✨ Snapshot
 
-## Estructura
-```
-CNAME
-index.html
-main.js
-style.css
-assets/
-  aaa.txt
-sections/
-  about.html
-  blog.html
-  contact.html
-  projects.html
-  services.html
-  skills.html
-  vibecoding.html
-viewer.html
-viewer.js
-```
+- 🧠 Agents with **LangGraph** and **LangChain**.
+- ⚙️ Backend with **Python**, **Django**, and **REST APIs**.
+- ☁️ Hands-on experience with **AWS**.
+- 📊 Data & analytics with **Pandas**, **NumPy**, **Matplotlib**, **Web Scraping**, **Machine Learning**, and **Power BI**.
+- 🗄️ Databases: **PostgreSQL** and **SQLite**.
 
-- `index.html`: punto de entrada del sitio.
-- `style.css`: estilos globales.
-- `main.js`: lógica de interacción/navegación.
-- `sections/`: contenido de cada sección del sitio.
-- `assets/`: recursos estáticos (imágenes, fuentes, etc.).
-- `CNAME`: dominio personalizado para GitHub Pages (no eliminar si usas dominio propio).
+## 🧩 Core Stack
 
-## Ejecutar en local
-Opción rápida: abrir directamente [index.html](index.html) en tu navegador.
+| AI & Agents | Backend & Cloud | Data & Analytics | Databases |
+|---|---|---|---|
+| LangGraph | Python | Pandas | PostgreSQL |
+| LangChain | Django | NumPy | SQLite |
+| Observability | REST APIs | Matplotlib |  |
+| Evaluations | AWS | Machine Learning |  |
+|  |  | Web Scraping |  |
+|  |  | Power BI |  |
 
-Opcionalmente, puedes servir el sitio con un servidor estático para simular un entorno más realista:
+## 🚀 Featured Projects
 
-- Con Python (si lo tienes instalado):
-```bash
-# Desde la raíz del repo
-python -m http.server 8080
-# Abre http://localhost:8080
-```
+### HackerNews Report
+Open-source vibecoding project inspired by Hacker News. Exploratory by design and freely evolving.
 
-- Con Node.js (si usas http-server):
-```bash
-npm install -g http-server
-http-server -p 8080
-# Abre http://localhost:8080
-```
+🔗 [View repository](https://github.com/iJKENNEDY/hackernews-report)
 
-- Con la extensión “Live Server” de VS Code: abre `index.html` y ejecuta “Open with Live Server”.
+### duoMind
+Memory-match game with a Pokémon card aesthetic, featuring 2D and 3D modes built with React and Three.js.
 
-## Flujo de desarrollo
-- HTML: edita las secciones en [sections/](sections) y la estructura base en [index.html](index.html).
-- CSS: ajusta estilos globales en [style.css](style.css).
-- JS: añade o modifica interacciones en [main.js](main.js).
-- Recursos: coloca imágenes/archivos en [assets/](assets).
+🔗 [View repository](https://github.com/iJKENNEDY/duoMind)
 
-Sugerencias:
-- Mantén una semántica HTML correcta para accesibilidad.
-- Usa clases y variables CSS coherentes para facilitar mantenibilidad.
-- Prueba en móvil y escritorio para verificar diseño responsive.
+### pdfextract-tool
+Tool for extracting text and data from PDF files.
 
-## Despliegue (GitHub Pages)
-Este repositorio está preparado para publicarse con GitHub Pages (rama por defecto: `portf-f1`). Pasos típicos:
-1. Haz commit de tus cambios y súbelos a la rama por defecto.
-2. En GitHub, configura GitHub Pages para usar la rama por defecto o la que prefieras.
-3. Si usas dominio propio, mantén actualizado el archivo [CNAME](CNAME) con tu dominio.
+🔗 [View repository](https://github.com/iJKENNEDY/pdfextract-tool)
 
-Notas:
-- Los cambios en la rama publicada pueden tardar unos minutos en reflejarse.
-- Evita borrar o sobrescribir `CNAME` si ya tienes un dominio configurado.
+### Projects Hub
+Hub dedicated to case studies, demos, and deeper documentation.
 
-## Mantenimiento y tareas comunes
-- Añadir una nueva sección: crea un archivo en [sections/](sections) (por ejemplo, `experience.html`) y enlázalo desde la navegación en [index.html](index.html) o cárgalo dinámicamente desde [main.js](main.js).
-- Actualizar estilos: centraliza modificaciones en [style.css](style.css) para mantener consistencia.
-- Optimizar recursos: comprime imágenes en [assets/](assets) y usa formatos modernos cuando sea posible.
+🔗 [Open hub](http://projects.jkhenzai.dev/)
 
-### VibeCoding
-Sección dedicada a proyectos rápidos y exploratorios. Primer proyecto:
-- HackerNews Report: https://github.com/iJKENNEDY/hackernews-report
+## 🎯 What I'm building now
 
-### Viewer de secciones
-Puedes abrir `Projects`, `Blog` y `VibeCoding` en una ventana/pestaña separada:
-- Navegación: icono de ventana junto a cada sección en [index.html](index.html).
-- Directo: [viewer.html?section=projects](viewer.html?section=projects), [viewer.html?section=blog](viewer.html?section=blog), [viewer.html?section=vibecoding](viewer.html?section=vibecoding)
+- Clearer, more robust, and maintainable backend solutions.
+- Deeper work in AI Engineering and agent evaluation.
+- Projects with real utility and a polished visual presentation.
 
-Funciones del viewer:
-- Breadcrumb: muestra `Home / <Sección>` bajo el título.
-- Toggle de tema: botón en el header, sincronizado con `localStorage` (`theme=dark|light`).
+## 📫 Contact
 
-## Autor
-- iJKENNEDY
+- GitHub: [iJKENNEDY](https://github.com/iJKENNEDY)
+- LinkedIn: [jherssonhz](https://linkedin.com/in/jherssonhz/)
+- Website: [jkhenzai.dev](https://jkhenzai.dev)
 
 ---
-¿Necesitas que personalice este README con la URL pública exacta o capturas? Indícame el dominio/URL y lo añado.
+
+✨ README designed for a first impression: short, clear, and focused on skills and projects.
