@@ -5,6 +5,7 @@ const PROJECTS_URL = 'http://projects.jkhenzai.dev/';
 const sections = [
     { id: 'about', file: 'sections/about.html' },
     { id: 'skills', file: 'sections/skills.html' },
+    { id: 'certifications', file: 'sections/certifications.html' },
     { id: 'services', file: 'sections/services.html' },
     { id: 'projects', file: 'sections/projects.html' },
     { id: 'vibecoding', file: 'sections/vibecoding.html' },
