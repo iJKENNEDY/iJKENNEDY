@@ -1,22 +1,18 @@
 (function() {
-  const EXTERNAL_SECTIONS = {
-    projects: 'http://projects.jkhenzai.dev/'
+  const map = {
+    engineering: 'sections/engineering.html',
+    labs: 'sections/labs.html',
+    projects: 'sections/projects.html'
   };
 
-  const map = {
-    projects: 'sections/projects.html',
-    blog: 'sections/blog.html',
-    vibecoding: 'sections/vibecoding.html'
+  const titleMap = {
+    engineering: 'Engineering',
+    labs: 'Labs',
+    projects: 'Projects'
   };
 
   const params = new URLSearchParams(window.location.search);
   const section = params.get('section');
-
-  const titleMap = {
-    projects: 'Projects',
-    blog: 'Blog',
-    vibecoding: 'VibeCoding'
-  };
 
   const viewerTitle = document.getElementById('viewerTitle');
   const viewerCrumb = document.getElementById('viewerCrumb');
@@ -52,16 +48,11 @@
     });
   }
 
-  if (section && EXTERNAL_SECTIONS[section]) {
-    window.location.href = EXTERNAL_SECTIONS[section];
-    return;
-  }
-
   if (!section || !(section in map)) {
     viewerTitle.textContent = 'Section not found';
     if (viewerCrumb) viewerCrumb.textContent = 'Home / N/A';
     host.innerHTML = '<div class="bg-section-bg rounded-xl p-6 border border-border">' +
-      '<p class="font-body">Debes proporcionar una sección válida (?section=projects|blog|vibecoding).</p>' +
+      '<p class="font-body">Please provide a valid section (?section=engineering|labs|projects).</p>' +
       '</div>';
     return;
   }
@@ -76,7 +67,7 @@
     })
     .catch(err => {
       host.innerHTML = '<div class="bg-section-bg rounded-xl p-6 border border-border">' +
-        '<p class="font-body">No se pudo cargar la sección: ' + String(err) + '</p>' +
+        '<p class="font-body">Could not load section: ' + String(err) + '</p>' +
         '</div>';
     });
 })();

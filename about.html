@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — JKHZ | AI & Product Engineer</title>
+    <meta name="description" content="About JKHZ — AI Engineer, Product Engineer, and Systems Engineer. Bio, experience, skills, certifications, and resume.">
+    <link rel="canonical" href="https://jkhenzai.dev/about.html">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="About — JKHZ | AI & Product Engineer">
+    <meta property="og:description" content="About JKHZ — AI Engineer, Product Engineer, and Systems Engineer. Bio, experience, skills, certifications, and resume.">
+    <meta property="og:image" content="https://jkhenzai.dev/assets/portaljk.png">
+    <meta property="og:url" content="https://jkhenzai.dev/about.html">
+
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/22012490?s=48&v=4">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary)',
+                        secondary: 'var(--color-secondary)',
+                        background: 'var(--color-background)',
+                        text: 'var(--color-text)',
+                        accent: 'var(--color-accent)',
+                        border: 'var(--color-border)',
+                        'section-bg': 'var(--color-section-bg)',
+                        title: 'var(--color-title)',
+                    },
+                    fontFamily: {
+                        titles: ['Orbitron', 'sans-serif'],
+                        body: ['Rajdhani', 'sans-serif'],
+                        console: ['"Courier New"', 'Courier', 'monospace'],
+                    },
+                    boxShadow: {
+                        'neon-primary': '0 0 15px var(--color-primary)',
+                        'neon-accent': '0 0 15px var(--color-accent)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-text transition-colors duration-300 min-h-screen flex flex-col items-center p-4 sm:p-8">
+
+    <!-- Navigation -->
+    <nav class="w-full max-w-5xl bg-section-bg bg-opacity-95 backdrop-blur-sm p-4 rounded-b-lg shadow-lg mb-8 sticky top-0 z-50 border-b-2 border-primary" aria-label="Main navigation">
+        <ul class="flex flex-wrap justify-center gap-3 sm:gap-6 font-titles text-secondary text-sm sm:text-base items-center">
+            <li><a href="index.html" class="hover:text-primary transition-colors duration-200">Home</a></li>
+            <li><a href="index.html#projects" class="hover:text-primary transition-colors duration-200">Projects</a></li>
+            <li><a href="index.html#engineering" class="hover:text-primary transition-colors duration-200">Engineering</a></li>
+            <li><a href="index.html#labs" class="hover:text-primary transition-colors duration-200">Labs</a></li>
+            <li><a href="about.html" class="text-primary border-b-2 border-primary">About</a></li>
+            <li><a href="assets/cv_JherssonHuaman.pdf" download class="hover:text-primary transition-colors duration-200">Resume</a></li>
+            <li><a href="index.html#contact" class="hover:text-primary transition-colors duration-200">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="w-full max-w-5xl mb-8">
+        <div class="flex flex-col sm:flex-row items-center gap-6">
+            <img src="https://avatars.githubusercontent.com/u/22012490?s=200" alt="JKHZ Profile Photo" class="w-28 h-28 rounded-full border-4 border-primary shadow-neon-primary object-cover">
+            <div class="text-center sm:text-left">
+                <h1 class="font-titles text-3xl sm:text-4xl text-title mb-2">About Me</h1>
+                <p class="font-body text-lg text-secondary">AI Engineer · Product Engineer · Systems Engineer</p>
+            </div>
+            <div class="sm:ml-auto">
+                <a href="assets/cv_JherssonHuaman.pdf" download class="inline-flex items-center gap-2 bg-primary text-white font-titles px-5 py-2.5 rounded-full hover:bg-accent hover:text-background transition shadow-neon-primary" id="about-download-cv">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bio -->
+    <section class="w-full max-w-5xl bg-section-bg rounded-2xl shadow-xl p-8 mb-8 border border-border" id="about-bio">
+        <h2 class="font-titles text-2xl text-title mb-4">Bio</h2>
+        <p class="font-body text-lg text-text mb-4">
+            I am <strong>JKHZ</strong>, a backend developer specialized in <strong>Python</strong> and <strong>PostgreSQL</strong>, with a strong focus on building <strong>scalable systems</strong> and <strong>intelligent automation</strong>. My expertise includes designing <strong>RESTful APIs</strong>, integrating <strong>AI agents</strong> (MCP), and developing advanced applications powered by <strong>artificial intelligence</strong>.
+        </p>
+        <ul class="list-disc pl-6 font-body text-text text-base space-y-2">
+            <li><strong>Backend architecture</strong> with Python, FastAPI, and Django</li>
+            <li><strong>Database engineering</strong> and optimization using PostgreSQL</li>
+            <li><strong>AI agents</strong> (MCP) for automation and analytics</li>
+            <li>Building and integrating <strong>AI-powered apps</strong> for business and tech solutions</li>
+            <li>Passionate about <strong>speed</strong>, <strong>reliability</strong>, and cutting-edge technology</li>
+        </ul>
+    </section>
+
+    <!-- Experience -->
+    <section class="w-full max-w-5xl bg-section-bg rounded-2xl shadow-xl p-8 mb-8 border border-border" id="about-experience">
+        <h2 class="font-titles text-2xl text-title mb-4">Experience</h2>
+        <!-- TODO: Add work experience entries -->
+        <!-- Each entry should include: role, company, period, description, technologies used -->
+        <p class="font-body text-secondary italic">Experience details coming soon.</p>
+    </section>
+
+    <!-- Education -->
+    <section class="w-full max-w-5xl bg-section-bg rounded-2xl shadow-xl p-8 mb-8 border border-border" id="about-education">
+        <h2 class="font-titles text-2xl text-title mb-4">Education</h2>
+        <div class="bg-background rounded-xl p-6 border border-border">
+            <h3 class="font-titles text-lg text-title">Systems Engineering</h3>
+            <p class="font-body text-secondary">In progress</p>
+            <!-- TODO: Add university name, expected graduation, relevant coursework -->
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="w-full max-w-5xl bg-section-bg rounded-2xl shadow-xl p-8 mb-8 border border-border" id="about-skills">
+        <h2 class="font-titles text-2xl text-title mb-4">Skills</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex items-center gap-4 bg-background rounded-xl p-5 border border-border hover:border-primary transition">
+                <i class="fas fa-database text-primary text-2xl"></i>
+                <span class="font-body text-text text-lg">MongoDB & PostgreSQL</span>
+            </div>
+            <div class="flex items-center gap-4 bg-background rounded-xl p-5 border border-border hover:border-primary transition">
+                <i class="fas fa-robot text-primary text-2xl"></i>
+                <span class="font-body text-text text-lg">AI & Machine Learning</span>
+            </div>
+            <div class="flex items-center gap-4 bg-background rounded-xl p-5 border border-border hover:border-primary transition">
+                <i class="fab fa-python text-primary text-2xl"></i>
+                <span class="font-body text-text text-lg">Python, FastAPI, Django</span>
+            </div>
+            <div class="flex items-center gap-4 bg-background rounded-xl p-5 border border-border hover:border-primary transition">
+                <i class="fab fa-git-alt text-primary text-2xl"></i>
+                <span class="font-body text-text text-lg">Git & Version Control</span>
+            </div>
+            <!-- TODO: Add more skills as relevant -->
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="w-full max-w-5xl bg-section-bg rounded-2xl shadow-xl p-8 mb-8 border border-border" id="about-certifications">
+        <h2 class="font-titles text-2xl text-title mb-4">Certifications</h2>
+        <p class="font-body text-secondary mb-6">Verified certificates from Google, LangChain, and Kaggle.</p>
+
+        <div class="grid grid-cols-1 gap-8">
+            <!-- Google -->
+            <div class="space-y-4">
+                <h3 class="font-titles text-xl text-primary">Google</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <article class="bg-background rounded-xl p-5 border border-border flex flex-col gap-3 hover:border-primary transition">
+                        <p class="font-body text-text">Credential 1</p>
+                        <a href="https://www.credly.com/earner/earned/badge/ef2a8ce8-6d91-4502-be05-fcebe3be0c87" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-primary text-white font-titles px-4 py-2 rounded-lg hover:bg-accent hover:text-background transition text-sm">
+                            <i class="fas fa-shield-alt"></i> Verify
+                        </a>
+                    </article>
+                    <article class="bg-background rounded-xl p-5 border border-border flex flex-col gap-3 hover:border-primary transition">
+                        <p class="font-body text-text">Credential 2</p>
+                        <a href="https://www.credly.com/earner/earned/badge/81b0ab55-11d4-456c-b90b-c5e897408c70" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-primary text-white font-titles px-4 py-2 rounded-lg hover:bg-accent hover:text-background transition text-sm">
+                            <i class="fas fa-shield-alt"></i> Verify
+                        </a>
+                    </article>
+                    <article class="bg-background rounded-xl p-5 border border-border flex flex-col gap-3 hover:border-primary transition">
+                        <p class="font-body text-text">Credential 3</p>
+                        <a href="https://www.credly.com/earner/earned/badge/e5dceb71-3249-4dec-b39c-3eb9c9081e1e" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-primary text-white font-titles px-4 py-2 rounded-lg hover:bg-accent hover:text-background transition text-sm">
+                            <i class="fas fa-shield-alt"></i> Verify
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- LangChain -->
+            <div class="space-y-4">
+                <h3 class="font-titles text-xl text-primary">LangChain Academy</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <article class="bg-background rounded-xl p-5 border border-border flex flex-col gap-3 hover:border-primary transition">
+                        <p class="font-body text-text">Certificate 1</p>
+                        <a href="https://academy.langchain.com/certificates/4fwoziskh2" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-primary text-white font-titles px-4 py-2 rounded-lg hover:bg-accent hover:text-background transition text-sm">
+                            <i class="fas fa-link"></i> View
+                        </a>
+                    </article>
+                    <article class="bg-background rounded-xl p-5 border border-border flex flex-col gap-3 hover:border-primary transition">
+                        <p class="font-body text-text">Certificate 2</p>
+                        <a href="https://academy.langchain.com/certificates/qfn0yoyfx8" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-primary text-white font-titles px-4 py-2 rounded-lg hover:bg-accent hover:text-background transition text-sm">
+                            <i class="fas fa-link"></i> View
+                        </a>
+                    </article>
+                    <article class="bg-background rounded-xl p-5 border border-border flex flex-col gap-3 hover:border-primary transition">
+                        <p class="font-body text-text">Certificate 3</p>
+                        <a href="https://academy.langchain.com/certificates/88bkyogfn0" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-primary text-white font-titles px-4 py-2 rounded-lg hover:bg-accent hover:text-background transition text-sm">
+                            <i class="fas fa-link"></i> View
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Kaggle -->
+            <div class="space-y-4">
+                <h3 class="font-titles text-xl text-primary">Kaggle</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <article class="bg-background rounded-xl p-5 border border-border flex flex-col gap-3 hover:border-primary transition">
+                        <p class="font-body text-text">Feature Engineering</p>
+                        <a href="https://www.kaggle.com/learn/certification/jherssonzarate/feature-engineering" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-primary text-white font-titles px-4 py-2 rounded-lg hover:bg-accent hover:text-background transition text-sm">
+                            <i class="fas fa-link"></i> View
+                        </a>
+                    </article>
+                    <article class="bg-background rounded-xl p-5 border border-border flex flex-col gap-3 hover:border-primary transition">
+                        <p class="font-body text-text">Intro to Deep Learning</p>
+                        <a href="https://www.kaggle.com/learn/certification/jherssonzarate/intro-to-deep-learning" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-primary text-white font-titles px-4 py-2 rounded-lg hover:bg-accent hover:text-background transition text-sm">
+                            <i class="fas fa-link"></i> View
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Toggle -->
+    <button id="aboutThemeToggle" title="Toggle Theme"
+        class="fixed bottom-6 right-6 bg-primary text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center w-14 h-14 border-4 border-accent hover:bg-accent hover:text-primary hover:scale-110 focus:outline-none focus:ring-4 focus:ring-accent focus:ring-opacity-75"
+        aria-label="Toggle Theme">
+        <span class="flex items-center justify-center w-full h-full relative">
+            <i class="fas fa-sun text-xl transition-transform duration-300 rotate-0 dark:-rotate-90"></i>
+            <i class="fas fa-moon text-xl transition-transform duration-300 absolute opacity-0 dark:opacity-100 dark:rotate-0"></i>
+        </span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-5xl text-center py-8 border-t-2 border-secondary mt-8 text-secondary font-body text-lg bg-section-bg">
+        <div class="flex flex-col items-center gap-4 mb-4">
+            <div class="flex justify-center gap-6">
+                <a href="https://linkedin.com/in/jherssonhz/" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://github.com/iJKENNEDY" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="GitHub">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://x.com/jkennz" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="X (Twitter)">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+            </div>
+            <a href="sections/business.html" class="text-secondary hover:text-primary font-titles text-sm transition">Business Inquiries</a>
+        </div>
+        <p>&copy; 2025 JKHZ — All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Theme toggle for standalone About page
+        (function() {
+            const body = document.body;
+            const toggle = document.getElementById('aboutThemeToggle');
+            const icon = toggle.querySelector('i');
+
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && prefersDark)) {
+                body.classList.add('dark');
+            }
+
+            toggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+            });
+        })();
+    </script>
+</body>
+</html>

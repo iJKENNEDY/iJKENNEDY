@@ -1,20 +1,123 @@
 <section id="projects" class="w-full max-w-5xl bg-section-bg rounded-2xl shadow-xl p-8 mb-12 border border-border">
-    <h2 class="font-titles text-3xl text-title mb-6">Projects</h2>
-    <div class="bg-background border border-border rounded-2xl p-8 shadow-lg flex flex-col gap-6 sm:flex-row sm:items-center">
-        <div class="flex-1">
-            <p class="font-body text-lg text-text mb-3">
-                Mis proyectos ahora viven en un espacio dedicado con casos de estudio detallados, demos en vivo y documentación.
-            </p>
-            <p class="font-body text-text">
-                Haz clic en el botón para visitar el nuevo hub y seguir explorando.
-            </p>
-        </div>
-        <div class="flex flex-col items-start gap-3">
-            <a href="http://projects.jkhenzai.dev/" class="inline-flex items-center gap-2 bg-primary text-background font-titles tracking-wide px-6 py-3 rounded-full shadow-neon-primary hover:bg-accent hover:text-primary transition" target="_blank" rel="noopener">
-                <span>Explorar Projects Hub</span>
-                <i class="fas fa-arrow-right"></i>
-            </a>
-            <span class="font-console text-xs text-secondary uppercase tracking-widest">Se abre en una pestaña nueva</span>
-        </div>
+    <h2 class="font-titles text-2xl text-title mb-2">Featured Projects</h2>
+    <p class="font-body text-secondary mb-6">Selected work — each project is a story of problem, solution, and engineering decisions.</p>
+
+    <div class="flex flex-col gap-8">
+        <!-- Project 1: HackerNews Report -->
+        <article class="bg-background border border-border rounded-xl p-6 hover:border-primary transition" id="project-hackernews">
+            <div class="flex flex-col sm:flex-row gap-6">
+                <div class="flex-1">
+                    <h3 class="font-titles text-xl text-title mb-3">HackerNews Report</h3>
+                    <div class="space-y-2 mb-4">
+                        <div>
+                            <span class="font-titles text-xs text-accent uppercase tracking-wider">Problem</span>
+                            <p class="font-body text-text">Staying up to date with Hacker News requires daily manual scanning of hundreds of posts.</p>
+                        </div>
+                        <div>
+                            <span class="font-titles text-xs text-accent uppercase tracking-wider">Solution</span>
+                            <p class="font-body text-text">Automated pipeline that scrapes, filters, and generates curated daily reports from Hacker News.</p>
+                        </div>
+                        <!-- TODO: Add Architecture section with diagram -->
+                        <!-- TODO: Add Challenges section -->
+                        <!-- TODO: Add Results/Metrics section -->
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="font-console text-xs px-2 py-0.5 rounded-full border border-border text-accent">Python</span>
+                        <span class="font-console text-xs px-2 py-0.5 rounded-full border border-border text-accent">Web Scraping</span>
+                        <span class="font-console text-xs px-2 py-0.5 rounded-full border border-border text-accent">Automation</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/iJKENNEDY/hackernews-report" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-accent font-titles text-sm underline hover:text-primary transition">
+                            <i class="fab fa-github"></i> Repository
+                        </a>
+                        <!-- TODO: Add demo link when available -->
+                    </div>
+                </div>
+                <div class="sm:w-64 shrink-0">
+                    <img src="https://opengraph.githubassets.com/1/iJKENNEDY/hackernews-report" alt="HackerNews Report" class="w-full h-40 object-cover rounded-lg border border-border">
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 2: duoMind -->
+        <article class="bg-background border border-border rounded-xl p-6 hover:border-primary transition" id="project-duomind">
+            <div class="flex flex-col sm:flex-row gap-6">
+                <div class="flex-1">
+                    <h3 class="font-titles text-xl text-title mb-3">duoMind</h3>
+                    <div class="space-y-2 mb-4">
+                        <div>
+                            <span class="font-titles text-xs text-accent uppercase tracking-wider">Problem</span>
+                            <p class="font-body text-text">Memory games lack visual appeal and modern interaction patterns that engage today's users.</p>
+                        </div>
+                        <div>
+                            <span class="font-titles text-xs text-accent uppercase tracking-wider">Solution</span>
+                            <p class="font-body text-text">Pokémon-card styled memory matching game with 2D and 3D modes, built with React and Three.js.</p>
+                        </div>
+                        <!-- TODO: Add Architecture section -->
+                        <!-- TODO: Add Challenges section -->
+                        <!-- TODO: Add Results/Metrics section -->
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="font-console text-xs px-2 py-0.5 rounded-full border border-border text-accent">React</span>
+                        <span class="font-console text-xs px-2 py-0.5 rounded-full border border-border text-accent">Three.js</span>
+                        <span class="font-console text-xs px-2 py-0.5 rounded-full border border-border text-accent">Game Development</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/iJKENNEDY/duoMind" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-accent font-titles text-sm underline hover:text-primary transition">
+                            <i class="fab fa-github"></i> Repository
+                        </a>
+                        <!-- TODO: Add demo link when available -->
+                    </div>
+                </div>
+                <div class="sm:w-64 shrink-0">
+                    <img src="https://opengraph.githubassets.com/1/iJKENNEDY/duoMind" alt="duoMind" class="w-full h-40 object-cover rounded-lg border border-border">
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 3: pdfextract-tool -->
+        <article class="bg-background border border-border rounded-xl p-6 hover:border-primary transition" id="project-pdfextract">
+            <div class="flex flex-col sm:flex-row gap-6">
+                <div class="flex-1">
+                    <h3 class="font-titles text-xl text-title mb-3">pdfextract-tool</h3>
+                    <div class="space-y-2 mb-4">
+                        <div>
+                            <span class="font-titles text-xs text-accent uppercase tracking-wider">Problem</span>
+                            <p class="font-body text-text">Extracting structured data from PDFs is unreliable with generic tools, especially for complex layouts.</p>
+                        </div>
+                        <div>
+                            <span class="font-titles text-xs text-accent uppercase tracking-wider">Solution</span>
+                            <p class="font-body text-text">Purpose-built Python tool for text and data extraction from PDF files with validation and structured output.</p>
+                        </div>
+                        <!-- TODO: Add Architecture section -->
+                        <!-- TODO: Add Challenges section -->
+                        <!-- TODO: Add Results/Metrics section -->
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="font-console text-xs px-2 py-0.5 rounded-full border border-border text-accent">Python</span>
+                        <span class="font-console text-xs px-2 py-0.5 rounded-full border border-border text-accent">PDF Parsing</span>
+                        <span class="font-console text-xs px-2 py-0.5 rounded-full border border-border text-accent">Data Extraction</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/iJKENNEDY/pdfextract-tool" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-accent font-titles text-sm underline hover:text-primary transition">
+                            <i class="fab fa-github"></i> Repository
+                        </a>
+                        <!-- TODO: Add demo link when available -->
+                    </div>
+                </div>
+                <div class="sm:w-64 shrink-0">
+                    <img src="https://opengraph.githubassets.com/1/iJKENNEDY/pdfextract-tool" alt="pdfextract-tool" class="w-full h-40 object-cover rounded-lg border border-border">
+                </div>
+            </div>
+        </article>
+
+        <!-- TODO: Add more projects as case studies -->
+    </div>
+
+    <!-- View All Projects link -->
+    <div class="mt-8 text-center">
+        <a href="http://projects.jkhenzai.dev/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-accent font-titles underline hover:text-primary transition" id="link-all-projects">
+            View All Projects <i class="fas fa-arrow-right text-xs"></i>
+        </a>
     </div>
 </section>

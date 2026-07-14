@@ -1,28 +1,28 @@
-<!-- WEBSITE F1 STYLE -->
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JKHZ Portfolio | Desarrollador Full-Stack, IA y Cloud</title>
-    <meta name="description" content="Portafolio personal de JKHZ, desarrollador full-stack enfocado en experiencias web modernas, inteligencia artificial, cloud y productos digitales creativos.">
+    <title>JKHZ — AI Engineer & Product Engineer</title>
+    <meta name="description" content="JKHZ is an AI Engineer and Product Engineer who designs and builds intelligent software systems from idea to production. Python, FastAPI, PostgreSQL, LLMs, and agent systems.">
     <link rel="canonical" href="https://jkhenzai.dev/">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0f172a">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="JKHZ Portfolio | Desarrollador Full-Stack, IA y Cloud">
-    <meta property="og:description" content="Portafolio personal de JKHZ con proyectos de desarrollo full-stack, inteligencia artificial, cloud y trabajo digital creativo.">
+    <meta property="og:title" content="JKHZ — AI Engineer & Product Engineer">
+    <meta property="og:description" content="Building intelligent systems from idea to production. AI Engineering, Product Engineering, and Systems Engineering.">
     <meta property="og:image" content="https://jkhenzai.dev/assets/portaljk.png">
     <meta property="og:image:alt" content="JKHZ Portfolio preview image">
     <meta property="og:url" content="https://jkhenzai.dev/">
     <meta property="og:site_name" content="JKHZ Portfolio">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JKHZ Portfolio | Desarrollador Full-Stack, IA y Cloud">
-    <meta name="twitter:description" content="Portafolio personal de JKHZ con proyectos de desarrollo full-stack, inteligencia artificial, cloud y trabajo digital creativo.">
+    <meta name="twitter:title" content="JKHZ — AI Engineer & Product Engineer">
+    <meta name="twitter:description" content="Building intelligent systems from idea to production. AI Engineering, Product Engineering, and Systems Engineering.">
     <meta name="twitter:image" content="https://jkhenzai.dev/assets/portaljk.png">
-    <link rel="icon" type="image/png" href="logo-dev.png">
+
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/22012490?s=48&v=4">
 
     <script type="application/ld+json">
     {
@@ -31,7 +31,7 @@
       "name": "JKHZ",
       "url": "https://jkhenzai.dev/",
       "image": "https://jkhenzai.dev/assets/portaljk.png",
-      "jobTitle": "Desarrollador Full-Stack",
+      "jobTitle": "AI Engineer & Product Engineer",
       "sameAs": [
         "https://github.com/iJKENNEDY",
         "https://www.linkedin.com/in/jherssonhz/",
@@ -41,10 +41,9 @@
       ]
     }
     </script>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!--icon page-->
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/22012490?s=48&v=4">
     <!-- FontAwesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts - Orbitron and Rajdhani -->
@@ -58,14 +57,14 @@
         theme: {
             extend: {
                 colors: {
-                    primary: 'var(--color-primary)',      // Dorado principal / Petronas Teal
-                    secondary: 'var(--color-secondary)',  // Gris piedra técnica / Gris niebla técnica
-                    background: 'var(--color-background)',// Champán claro / Azul profundo marino
-                    text: 'var(--color-text)',            // Negro elegante / Blanco hielo
-                    accent: 'var(--color-accent)',        // Teal Mercedes claro / Verde aguamarina claro
-                    border: 'var(--color-border)',        // Gris piedra técnica / Gris niebla técnica
-                    'section-bg': 'var(--color-section-bg)', // Blanco puro / Azul petróleo
-                    title: 'var(--color-title)',          // Dorado principal / Verde aguamarina claro
+                    primary: 'var(--color-primary)',
+                    secondary: 'var(--color-secondary)',
+                    background: 'var(--color-background)',
+                    text: 'var(--color-text)',
+                    accent: 'var(--color-accent)',
+                    border: 'var(--color-border)',
+                    'section-bg': 'var(--color-section-bg)',
+                    title: 'var(--color-title)',
                 },
                 fontFamily: {
                     titles: ['Orbitron', 'sans-serif'],
@@ -84,103 +83,57 @@
 <body class="bg-background text-text transition-colors duration-300 min-h-screen flex flex-col items-center p-4 sm:p-8">
 
     <!-- Navigation Bar -->
-    <nav class="w-full max-w-5xl bg-section-bg bg-opacity-95 backdrop-blur-sm p-4 rounded-b-lg shadow-lg mb-4 sticky top-0 z-50 border-b-2 border-primary">
-        <ul class="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-8 font-titles text-secondary text-sm sm:text-base md:text-lg items-center">
-            <li><a href="#about" class="hover:text-primary transition-colors duration-200">👤 ABOUT</a></li>
-            <li><a href="#skills" class="hover:text-primary transition-colors duration-200">🧠 SKILLS</a></li>
-            <li><a href="#certifications" class="hover:text-primary transition-colors duration-200">🏅 CERTIFICATIONS</a></li>
-            <li><a href="#services" class="hover:text-primary transition-colors duration-200">🛠️ SERVICES</a></li>
-            <li class="flex items-center gap-2">
-                <a href="#projects" class="hover:text-primary transition-colors duration-200">🚀 PROJECTS</a>
-                <a href="http://projects.jkhenzai.dev/" target="_blank" rel="noopener" class="text-secondary hover:text-primary" title="Abrir Projects en nueva pestaña"><i class="fas fa-window-restore"></i></a>
-            </li>
-            <li class="flex items-center gap-2">
-                <a href="#vibecoding" class="hover:text-primary transition-colors duration-200">🎧 VIBECODING</a>
-                <a href="viewer.html?section=vibecoding" target="_blank" rel="noopener" class="text-secondary hover:text-primary" title="Abrir VibeCoding en ventana"><i class="fas fa-window-restore"></i></a>
-            </li>
-            <li class="flex items-center gap-2">
-                <a href="#blog" class="hover:text-primary transition-colors duration-200">📝 BLOG</a>
-                <a href="viewer.html?section=blog" target="_blank" rel="noopener" class="text-secondary hover:text-primary" title="Abrir Blog en ventana"><i class="fas fa-window-restore"></i></a>
-            </li>
-            <li><a href="#contact" class="hover:text-primary transition-colors duration-200">✉️ CONTACT ME</a></li>
-            <li><a href="sections/business.html" class="hover:text-primary transition-colors duration-200">💼 BUSINESS</a></li>
-            <li class="px-3 py-1 rounded-full text-xs font-semibold tracking-wider bg-accent text-background dark:bg-primary dark:text-background animate-pulse select-none">BETA</li>
+    <nav class="w-full max-w-5xl bg-section-bg bg-opacity-95 backdrop-blur-sm p-4 rounded-b-lg shadow-lg mb-8 sticky top-0 z-50 border-b-2 border-primary" aria-label="Main navigation">
+        <ul class="flex flex-wrap justify-center gap-3 sm:gap-6 font-titles text-secondary text-sm sm:text-base items-center">
+            <li><a href="#hero" class="hover:text-primary transition-colors duration-200" id="nav-home">Home</a></li>
+            <li><a href="#projects" class="hover:text-primary transition-colors duration-200" id="nav-projects">Projects</a></li>
+            <li><a href="#engineering" class="hover:text-primary transition-colors duration-200" id="nav-engineering">Engineering</a></li>
+            <li><a href="#labs" class="hover:text-primary transition-colors duration-200" id="nav-labs">Labs</a></li>
+            <li><a href="about.html" class="hover:text-primary transition-colors duration-200" id="nav-about">About</a></li>
+            <li><a href="assets/cv_JherssonHuaman.pdf" download class="hover:text-primary transition-colors duration-200" id="nav-resume">Resume</a></li>
+            <li><a href="#contact" class="hover:text-primary transition-colors duration-200" id="nav-contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Beta Banner -->
-    <div id="betaNotice" class="w-full max-w-5xl mb-6 rounded-xl border border-border bg-background/90 backdrop-blur shadow-lg p-4 flex flex-col sm:flex-row gap-3 items-start sm:items-center transition duration-300">
-        <div class="flex items-center gap-3">
-            <span class="px-2 py-1 rounded-md text-[10px] font-bold tracking-widest bg-accent text-background dark:bg-primary dark:text-background">BETA</span>
-            <p class="font-body text-sm sm:text-base leading-snug">
-                Este portafolio está en modo beta. Algunas funciones pueden cambiar o estar incompletas. Gracias por visitar.
-            </p>
-        </div>
-        <button id="closeBetaBanner" class="ml-auto text-accent hover:text-primary dark:text-accent dark:hover:text-title transition text-sm font-titles flex items-center gap-1">
-            <i class="fas fa-times text-xs"></i> Cerrar
-        </button>
-    </div>
-
     <!-- Portfolio Sections -->
-    <div id="about-container"></div>
-    <div id="skills-container"></div>
-    <div id="certifications-container"></div>
-    <div id="services-container"></div>
+    <div id="hero-container"></div>
+    <div id="focus-container"></div>
     <div id="projects-container"></div>
-    <div id="vibecoding-container"></div>
-    <div id="blog-container"></div>
+    <div id="philosophy-container"></div>
+    <div id="engineering-container"></div>
+    <div id="labs-container"></div>
     <div id="contact-container"></div>
 
-    <!-- Modern Theme Toggle Button -->
+    <!-- Theme Toggle Button -->
     <button id="raceModeToggle" title="Toggle Theme"
-        class="fixed bottom-6 right-6 bg-primary text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center w-16 h-16 border-4 border-accent hover:bg-accent hover:text-primary hover:scale-110 focus:outline-none focus:ring-4 focus:ring-accent focus:ring-opacity-75"
+        class="fixed bottom-6 right-6 bg-primary text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center w-14 h-14 border-4 border-accent hover:bg-accent hover:text-primary hover:scale-110 focus:outline-none focus:ring-4 focus:ring-accent focus:ring-opacity-75"
         aria-label="Toggle Theme">
         <span class="flex items-center justify-center w-full h-full relative">
-            <i class="fas fa-sun text-2xl transition-transform duration-300 rotate-0 dark:-rotate-90"></i>
-            <i class="fas fa-moon text-2xl transition-transform duration-300 absolute opacity-0 dark:opacity-100 dark:rotate-0"></i>
+            <i class="fas fa-sun text-xl transition-transform duration-300 rotate-0 dark:-rotate-90"></i>
+            <i class="fas fa-moon text-xl transition-transform duration-300 absolute opacity-0 dark:opacity-100 dark:rotate-0"></i>
         </span>
     </button>
 
     <!-- Footer -->
     <footer class="w-full max-w-5xl text-center py-8 border-t-2 border-secondary mt-12 text-secondary font-body text-lg bg-section-bg">
-        <div class="flex flex-col items-center gap-6 mb-4">
+        <div class="flex flex-col items-center gap-4 mb-4">
             <div class="flex justify-center gap-6">
                 <a href="https://linkedin.com/in/jherssonhz/" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin text-3xl"></i>
+                    <i class="fab fa-linkedin text-2xl"></i>
                 </a>
                 <a href="https://github.com/iJKENNEDY" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="GitHub">
-                    <i class="fab fa-github text-3xl"></i>
+                    <i class="fab fa-github text-2xl"></i>
                 </a>
-                <a href="https://x.com/jkennz" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="Twitter">
-                    <i class="fab fa-twitter text-3xl"></i>
+                <a href="https://x.com/jkennz" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors duration-200" aria-label="X (Twitter)">
+                    <i class="fab fa-twitter text-2xl"></i>
                 </a>
             </div>
+            <a href="sections/business.html" class="text-secondary hover:text-primary font-titles text-sm transition" id="footer-business">Business Inquiries</a>
         </div>
-        <p>&copy; 2025 JKHZ - All rights reserved. Designed for maximum speed.</p>
+        <p>&copy; 2025 JKHZ — All rights reserved.</p>
     </footer>
-
-    <!-- QR Code Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
     <!-- Main Script -->
     <script type="text/javascript" src="main.js"></script>
-
-    <!-- Beta Banner Script -->
-    <script>
-        (function() {
-            const banner = document.getElementById('betaNotice');
-            const closeBtn = document.getElementById('closeBetaBanner');
-            if (localStorage.getItem('betaNoticeDismissed')) {
-                banner.classList.add('hidden');
-            }
-            closeBtn.addEventListener('click', () => {
-                banner.classList.add('opacity-0', '-translate-y-2');
-                setTimeout(() => {
-                    banner.classList.add('hidden');
-                    localStorage.setItem('betaNoticeDismissed', '1');
-                }, 250);
-            });
-        })();
-    </script>
-</body> 
+</body>
 </html>

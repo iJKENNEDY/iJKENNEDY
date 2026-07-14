@@ -1,33 +1,33 @@
 :root {
-    --color-primary: #D4AF37;      /* Dorado principal */
-    --color-secondary: #B4B4B4;    /* Gris piedra técnica */
-    --color-background: #F9F6EF;   /* Champán claro */
-    --color-section-bg: #FFFFFF;   /* Blanco puro */
-    --color-text: #1A1A1A;         /* Negro elegante */
-    --color-accent: #00D2BE;       /* Teal Mercedes claro */
-    --color-border: #B4B4B4;       /* Gris piedra técnica */
-    --color-title: #D4AF37;        /* Dorado principal */
+    --color-primary: #D4AF37;      /* Gold */
+    --color-secondary: #B4B4B4;    /* Stone grey */
+    --color-background: #F9F6EF;   /* Light champagne */
+    --color-section-bg: #FFFFFF;   /* White */
+    --color-text: #1A1A1A;         /* Dark text */
+    --color-accent: #00D2BE;       /* Teal */
+    --color-border: #B4B4B4;       /* Grey border */
+    --color-title: #D4AF37;        /* Gold title */
 }
 
 body.dark {
     --color-primary: #00B2A9;      /* Petronas Teal */
-    --color-secondary: #7A8C97;    /* Gris niebla técnica */
-    --color-background: #0A1F2C;   /* Azul profundo marino */
-    --color-section-bg: #123B46;   /* Azul petróleo */
-    --color-text: #F2F2F2;         /* Blanco hielo */
-    --color-accent: #4EF1E5;       /* Verde aguamarina claro */
-    --color-border: #7A8C97;       /* Gris niebla técnica */
-    --color-title: #4EF1E5;        /* Verde aguamarina claro */
+    --color-secondary: #7A8C97;    /* Mist grey */
+    --color-background: #0A1F2C;   /* Deep navy */
+    --color-section-bg: #123B46;   /* Petroleum blue */
+    --color-text: #F2F2F2;         /* Ice white */
+    --color-accent: #4EF1E5;       /* Aquamarine */
+    --color-border: #7A8C97;       /* Mist grey */
+    --color-title: #4EF1E5;        /* Aquamarine */
 }
 
-/* Puedes agregar esto en tu style.css para personalizar el enlace activo */
+/* Active section link */
 .active-section-link {
     color: var(--color-primary);
     border-bottom: 2px solid var(--color-primary);
     transition: color 0.2s, border-bottom 0.2s;
 }
 
-/* Navbar hover: highlight stronger with underline + glow */
+/* Nav hover: underline + glow */
 nav a {
     display: inline-block;
     position: relative;
@@ -52,19 +52,19 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* Viewer-only: enlarge paragraph text in standalone sections */
+/* Viewer: enlarge paragraph text in standalone sections */
 .viewer #section-host p {
     font-size: 1.4rem;
     line-height: 1.8;
 }
 
 /* Main page: enlarge paragraphs inside section containers */
-body:not(.viewer) #about-container p,
-body:not(.viewer) #skills-container p,
-body:not(.viewer) #services-container p,
+body:not(.viewer) #hero-container p,
+body:not(.viewer) #focus-container p,
 body:not(.viewer) #projects-container p,
-body:not(.viewer) #vibecoding-container p,
-body:not(.viewer) #blog-container p,
+body:not(.viewer) #philosophy-container p,
+body:not(.viewer) #engineering-container p,
+body:not(.viewer) #labs-container p,
 body:not(.viewer) #contact-container p {
     font-size: 1.4rem;
     line-height: 1.8;
